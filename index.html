@@ -17,43 +17,41 @@
     <head>
       <h1>🕹️ Let's play!</h1>
     </head>
+    <div class="border" id="cover">
+      <img id="coverPic" src="">
+      <button class="button" id="start">Start playing!</button>
+    </div>
     <div class="border" id="game-zone">
       <div class="border" id="pic-zone">
         <div id="image">
           <img id="picture" src="assets/images/incognite.png" alt="incognite">
         </div>
-        <button class="button" id="getPic">Get a picture</button>
+        <button class="button" class="toShow" id="getPic" data-type="getObject">Get a picture</button>
       </div>
       <div class="border" id="answer-zone">
         <div class="border" id="pickAnswer">
+          <form id="answerForm">
+          <input type="radio" name="opt1" value="1">opt1
+          <input type="radio" name="opt2" value="2">opt2
+          <input type="radio" name="opt3" value="3">opt3
+        </form>
 
-          <label for="opt1">Options 1</label>
-          <input type="radio" name="opt1" value="1">
-          <label for="opt2">Options 2</label>
-          <input type="radio" name="opt2" value="2">
-          <label for="opt3">Options 3</label>
-          <input type="radio" name="opt3" value="3">
-           
-          
         </div>
         <div class="border" id="resultButton">
-          <button class="button" id="checkSentence">Check your answer</button>
+          <button class="button" class="toShow" id="checkSentence">Check your answer</button>
         </div>
         <div class="border" id="showResult">
           <h3 id="result">Boo</h3>
         </div>
       </div>
-      <div class="border">
-        <img id="cover" src="">
-        <button class="button" id="start">Start playing!</button>
-      </div>
+      
     </div>
     <footer class="border" id="score">
       <div id="score-box">
-      <span> Score count</span>
+        <span> Score count</span>
       </div>
       <div id="exit">
-      <button id="exit">Exit 👉</button>
+        <button id="exit">Exit 👉</button>
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
@@ -64,4 +62,3 @@
   </body>
 
 </html>
-
