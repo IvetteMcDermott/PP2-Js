@@ -69,13 +69,15 @@
     justify-content: flex-end;
 }
 
+/* styling modal */
+
 #cover {
     background-color: orange!important;
     width: 100%;
     height: 100%;
     margin: 0 auto;
     position: fixed;
-    
+    z-index: 1;
 }
 
 /* styling the image zone */
@@ -121,8 +123,18 @@
 
 #start {
     position: fixed;
-    margin-top: 30%;
-    margin-left: 47%;
+    margin-top: 25%;
+    margin-left: 17%;
+    font-family: "PT Sans";
+    font-size: 1.3em;
+    font-weight: 900;
+    color: rgb(21, 21, 92);
+}
+
+#coverPic {
+    position:relative;
+    margin-top: 6%;
+    margin-left: 17%;
 }
 
 /* general styling */
@@ -139,7 +151,7 @@
     border-radius: 50%;
     border: 2px ridge;
     position: relative;
-
+    color:rgb(21, 21, 92);
 }
 /*
 #getPic, #checkSentence {

@@ -18,8 +18,8 @@
       <h1>🕹️ Let's play!</h1>
     </head>
     <div class="border" id="cover">
-      <img id="coverPic" src="">
-      <button class="button" id="start">Start playing!</button>
+      <img id="coverPic" src="assets/images/dancing-boy.gif">
+      <button class="button" id="start">Start!</button>
     </div>
     <div class="border" id="game-zone">
       <div class="border" id="pic-zone">
@@ -31,9 +31,12 @@
       <div class="border" id="answer-zone">
         <div class="border" id="pickAnswer">
           <form id="answerForm">
-          <input type="radio" name="opt1" value="1">opt1
-          <input type="radio" name="opt2" value="2">opt2
-          <input type="radio" name="opt3" value="3">opt3
+          <input type="radio" id="opt1" name="answer" value="1">
+          <label for="opt1" id="labOpt1">a</label></br>
+          <input type="radio" id="opt2" name="answer" value="2">
+          <label for="opt2" id="labOpt2">b</label></br>
+          <input type="radio" id="opt3" name="answer" value="3">
+          <label for="opt3" id="labOpt3">c</label></br>
         </form>
 
         </div>
@@ -41,7 +44,7 @@
           <button class="button" class="toShow" id="checkSentence">Check your answer</button>
         </div>
         <div class="border" id="showResult">
-          <h3 id="result">Boo</h3>
+          <img src="" id="result" alt="result animation">
         </div>
       </div>
       
