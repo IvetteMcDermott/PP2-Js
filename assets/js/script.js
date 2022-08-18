@@ -1,12 +1,6 @@
-
-
-
 const imgFolder="assets/images/"
 
 /* array with data for functions, will be assign to variables for their use */
-/* key img = for picture to display. This is being done generating a string with imgFolder and .png"
-   keys opt1, opt2 and opt3 = answer options (to labels for input radios)
-   key corrrectAnswer = to compare with the answer submitted, yet to see if the id of the input can be use instead of the string */
 
 let itemsInfo=[ 
     {img:1, opt1:"The socks are green.", opt2:"The pants are blue.", opt3:"The coat is yellow.", correctAnswer:"The pants are blue.",},
@@ -19,7 +13,7 @@ let itemsInfo=[
     {img:8, opt1:"The shorts are blue.", opt2:"The shorts are orange.", opt3:"The shorts are black.", correctAnswer:"The shorts are orange.",},
     {img:9, opt1:"The shorts are orange.", opt2:"The shorts are red.", opt3:"The shorts is green.", correctAnswer:"The shorts are red.",},
     {img:10, opt1:"The shorts are red.", opt2:"The shorts are yellow.", opt3:"The shorts are green.", correctAnswer:"The shorts are yellow.",},
-    {img:11, opt1:"The st-shirt is green.", opt2:"The skirt is blue.", opt3:"The shorts are blue.", correctAnswer:"The shorts are blue.",},
+    {img:11, opt1:"The t-shirt is green.", opt2:"The skirt is blue.", opt3:"The shorts are blue.", correctAnswer:"The skirt is blue.",},
     {img:12, opt1:"The skirts are green.", opt2:"The skirt is green.", opt3:"The short is green.", correctAnswer:"The skirt is green.",},
     {img:13, opt1:"The skirt is red.", opt2:"The skirt is orange.", opt3:"The skirt is blue.", correctAnswer:"The skirt is orange.",},
     {img:14, opt1:"The pants are blue.", opt2:"The skirt is red.", opt3:"The skirt is orange.", correctAnswer:"The skirt is red.",},
@@ -47,60 +41,78 @@ start.addEventListener("click",function() {
 
 let buttons = document.getElementsByTagName("button")
 
-
 for (let clicked of buttons) {
     clicked.addEventListener("click", function() {
         if (this.getAttribute("data-type") === "getObject") {
 
-            getObject ()
+            getObject()
 
-        } else if (this.getAttribute("data-type") === "sentenceCheck") {
+        } else if (this.getAttribute("data-type") === "checkSentence") {
            
-           checkSent ()
+           checkSent()
 
-        } else {
-
-            alert("whatever");
-
-        }
+        } 
     });
 }
 
 /* game functions  */
 
 let numObj = Math.floor(Math.random() * itemsInfo.length)+1;
+let objToUse=itemsInfo.find(({ img }) => img === numObj);
 
 function getObject() {
 
-/* generating ramdom image */    
+/* assigning ramdom image */    
 let img=document.getElementById("picture");
 let imgFile= `${imgFolder + numObj}.png`
 img.src=imgFile
 
 /* generating answer options */
-/*
-let onPlay = itemsInfo.find(img => itemsInfo.img === numObj);
-let answerOpt1=slice(onPlay[0,1]);
-document.getElementById("labOpt1")=answerOpt1
-*/
+
+
+
+let objOpt1= objToUse[0,'opt1'];
+let objOpt2= objToUse[0,'opt2'];
+let objOpt3= objToUse[0,'opt3'];
+
+
+document.getElementById("labOpt1").innerHTML=objOpt1
+document.getElementById("labOpt2").innerHTML=objOpt2
+document.getElementById("labOpt3").innerHTML=objOpt3
+
+document.getElementById("opt1").value=objOpt1
+document.getElementById("opt2").value=objOpt2
+document.getElementById("opt3").value=objOpt3
+
 }
 
-function checkSent () {
+function checkSent() {
 
     /** need to find how to recall what input radio was selected and submited */
-    /** again extract the correctAnswer from the array */
 
-let optPick
+let correctAnswer= objToUse[0,'correctAnswer'];
+let displayPic=document.getElementById("result");
 
-let displayPic = document.getElementById("result")
+    /* query selector from Geekforgeeks*/ 
+let checkRadio = document.querySelector(
+        'input[name="answer"]:checked');
 
-if (optPick === correctAnswer) {
+if (checkRadio.value === correctAnswer){
+    displayPic.src="assets/images/right-answer.gif"
     
-    displayPic.src="assets/image/right-answer.gif"
-
 } else {
-
-    displayPic.src="assets/image/wrong-answer.gif"
-
+    displayPic.src="assets/images/wrong-answer.gif"
 }
+}
+
+function audio(){
+    
+    let audio=document.getElementById("result-audio");
+    
+    if (displayPic.src="assets/images/wrong-answer.gif"){
+        audio.src="assets/audio/oops.mp3".autoplay
+    }
+    else {
+        audio.src="assets/audio/suis-mou.mp3"
+    }
 }
