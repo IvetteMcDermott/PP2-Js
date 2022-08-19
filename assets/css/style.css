@@ -1,10 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
 
+#headZone {
+    display: flex;
+}
 
+#title {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+}
 
+#startAudio {
+    width:40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#music {
+    margin-left: .4em;
+}
 /* styling the divs*/
-
-
 
 #game-zone {
     background-color: aquamarine;
@@ -12,14 +27,15 @@
 
 #pic-zone {
     width: 60%;
+    height: 58%;
     margin: auto;
-    padding: 1em;
+    padding: .5em;
     background-color: coral;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    margin-top:1em;
-    margin-bottom: 1em;
+    margin-top:.5em;
+    margin-bottom: .5em;
 }
 
 #answer-zone {
@@ -33,10 +49,10 @@
 
 #resultButton {
     width: 15em;
-    height: 12em;
-    padding: 1em;
+    height: 15em;
+    padding: .5em;
     align-items: center;
-    margin: 1em;
+    margin: .5em;
     display: flex;
     align-content: space-around;
     justify-content: center;
@@ -44,13 +60,19 @@
 
 #showResult{
     width: 15em;
-    height: 12em;
-    padding: 1em;
+    height: 15em;
+    padding: .5em;
     align-items: center;
-    margin: 1em;
+    margin: .5em;
     display: flex;
     align-content: space-around;
     justify-content: center;
+}
+
+#result {
+    object-fit: cover;
+    width: 15em;
+    height: 15em;
 }
 
 #score {
@@ -107,12 +129,9 @@
 #pickAnswer {
     font-family: "PT Sans";
     width: 15em;
-    height: 12em;
-    margin-left: 6em;
-    margin-top:1em;
-    margin-bottom: 1em;
-    margin-right:1em;    
-    padding:1em;
+    height: 15em;
+    margin:.5em;   
+    padding:.5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -153,7 +172,3 @@
     position: relative;
     color:rgb(21, 21, 92);
 }
-/*
-#getPic, #checkSentence {
-    visibility: hidden;
-}*/

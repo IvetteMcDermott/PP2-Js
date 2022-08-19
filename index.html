@@ -9,14 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/cosmo/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/f84495756a.js" crossorigin="anonymous"></script>
     <title>🕹️ Let's play!</title>
   </head>
 
   <body>
 
-    <head>
+    <header id="headZone">
+      <div id="title">
       <h1>🕹️ Let's play!</h1>
-    </head>
+    </div>
+    <div id="startAudio">
+      <button><i class="fas fa-question fa-2x"></i></button>
+      <button id="music">🔉</button>
+      <audio src="assets/audio/komiku_-_12_-_bicycle.wav" id="audio" autoplay></audio>
+    </div>
+    </header>
     <div class="border" id="cover">
       <img id="coverPic" src="assets/images/dancing-boy.gif">
       <button class="button" id="start">Start!</button>
@@ -32,11 +40,11 @@
         <div class="border" id="pickAnswer">
           <form id="answerForm">
           <input type="radio" id="opt1" name="answer" value="">
-          <label for="opt1" id="labOpt1">a</label></br>
+          <label for="opt1" id="labOpt1">?</label></br>
           <input type="radio" id="opt2" name="answer" value="">
-          <label for="opt2" id="labOpt2">b</label></br>
+          <label for="opt2" id="labOpt2">?</label></br>
           <input type="radio" id="opt3" name="answer" value="">
-          <label for="opt3" id="labOpt3">c</label></br>
+          <label for="opt3" id="labOpt3">?</label></br>
         </form>
 
         </div>
@@ -45,6 +53,7 @@
         </div>
         <div class="border" id="showResult">
           <img src="assets/images/bitting-nails.gif" id="result" alt="result animation">
+          <audio src="" id="audioAnswer">.</audio>
         </div>
       </div>
       

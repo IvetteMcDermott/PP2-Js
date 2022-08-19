@@ -1,5 +1,27 @@
 const imgFolder="assets/images/"
 
+
+    const music=document.getElementById("music");
+    const audio=document.getElementById("audio");
+    
+    let playOn=false
+    
+    music.addEventListener("click",function(){
+       if (music.innerHTML==="🔉"){
+                audio.play();
+                audio.loop=true;
+                audio.volume=0.06;
+                music.innerHTML="🔇";}
+                else {
+                    audio.pause()
+                    music.innerHTML="🔉"
+                }
+            
+                
+     });
+
+    
+
 /* array with data for functions, will be assign to variables for their use */
 
 let itemsInfo=[ 
@@ -92,6 +114,7 @@ function checkSent() {
 
 let correctAnswer= objToUse[0,'correctAnswer'];
 let displayPic=document.getElementById("result");
+let audio=document.getElementById("audioAnswer");
 
     /* query selector from Geekforgeeks*/ 
 let checkRadio = document.querySelector(
@@ -99,20 +122,18 @@ let checkRadio = document.querySelector(
 
 if (checkRadio.value === correctAnswer){
     displayPic.src="assets/images/right-answer.gif"
-    
+    audioAnswer.src="assets/audio/woohoo.mp3"
+    audioAnswer.play();
+    audioAnswer.loop=false;
+    audioAnswer.volume=0.04; 
 } else {
     displayPic.src="assets/images/wrong-answer.gif"
+    audioAnswer.src="assets/audio/oops.mp3"
+    audioAnswer.play();
+    audioAnswer.loop=false;
+    audioAnswer.volume=0.04;
+    
+
 }
 }
 
-function audio(){
-    
-    let audio=document.getElementById("result-audio");
-    
-    if (displayPic.src="assets/images/wrong-answer.gif"){
-        audio.src="assets/audio/oops.mp3".autoplay
-    }
-    else {
-        audio.src="assets/audio/suis-mou.mp3"
-    }
-}
