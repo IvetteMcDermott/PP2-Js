@@ -20,7 +20,7 @@
       <h1>🕹️ Let's play!</h1>
     </div>
     <div id="startAudio">
-      <button><i class="fas fa-question fa-2x"></i></button>
+      <button data-type="help"><i class="fas fa-question fa-2x"></i></button>
       <button id="music">🔉</button>
       <audio src="assets/audio/komiku_-_12_-_bicycle.wav" id="audio" autoplay></audio>
     </div>
@@ -60,9 +60,9 @@
     </div>
     <footer class="border" id="score">
       <div id="score-box">
-        <span> Score count</span>
+        <span> Score:<span id="correctAnswer"> 0 </span> de <span id="tries"> 0 </span> </span>
       </div>
-      <div id="exit">
+      <div id="exitDiv">
         <button id="exit">Exit 👉</button>
       </div>
     </footer>
@@ -70,6 +70,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 
+    <div id="helpInstructions" style="display: none";>
+      <p>Objetive of the game is to score 10 of 10, at the try number 10, game will stop and give you the score achived.</p>
+      <ol>
+        <li>Press the button "Get a Picture"</li>
+        <li>Look at the picture and select the sentence that describe the picture.</li>
+        <li>Press the button "Check your Answer"</li>
+        <li>You will get a result animation and your score will be increased.</li>
+      </ol>
+    </div>
     <script src="assets/js/script.js"></script>
   </body>
 

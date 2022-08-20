@@ -8,6 +8,7 @@
     width: 60%;
     display: flex;
     justify-content: flex-start;
+    font-size: 2em;
 }
 
 #startAudio {
@@ -18,6 +19,7 @@
 
 #music {
     margin-left: .4em;
+    font-size: 2em;
 }
 /* styling the divs*/
 
@@ -80,16 +82,23 @@
 }
 
 #score-box {
-    width: 60%;
+    width: 50%;
     display: flex;
     justify-content: flex-end;
 }
 
-#exit {
-    width: 35%;
+#exitDiv {
+    width: 50%;
     display: flex;
     justify-content: flex-end;
 }
+/*
+#helpInstructions {
+    width: 40%;
+    height: 30%;
+    z-index: 5;
+    position: fixed;
+}*/
 
 /* styling modal */
 
@@ -103,7 +112,6 @@
 }
 
 /* styling the image zone */
-
 
 #image, #picture {
     width: 30em;
@@ -171,4 +179,18 @@
     border: 2px ridge;
     position: relative;
     color:rgb(21, 21, 92);
+}
+
+span { 
+    font-family: "PT Sans";
+    font-size: large;
+    font-weight: 600;
+    color: rgb(21, 21, 92);
+}
+
+#exit {
+    width: 5em;
+    color: red;
+    font-family: "PT Sans";
+    font-weight: 600;
 }

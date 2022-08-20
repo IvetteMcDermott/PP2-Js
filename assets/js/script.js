@@ -1,6 +1,4 @@
-const imgFolder="assets/images/"
-
-
+/** background audio button */
     const music=document.getElementById("music");
     const audio=document.getElementById("audio");
     
@@ -15,14 +13,12 @@ const imgFolder="assets/images/"
                 else {
                     audio.pause()
                     music.innerHTML="🔉"
-                }
-            
-                
+                }            
      });
 
-    
+/* variabale and array with data for functions, will be assign to variables for their use */
 
-/* array with data for functions, will be assign to variables for their use */
+const imgFolder="assets/images/"
 
 let itemsInfo=[ 
     {img:1, opt1:"The socks are green.", opt2:"The pants are blue.", opt3:"The coat is yellow.", correctAnswer:"The pants are blue.",},
@@ -52,11 +48,9 @@ let itemsInfo=[
 let start=document.getElementById("start");
 let cover=document.getElementById("cover");
 
-
 start.addEventListener("click",function() {
     cover.style.visibility="hidden";
-    start.style.visibility="hidden";
-    
+    start.style.visibility="hidden";    
 })
 
 /* buttons click event */
@@ -70,12 +64,14 @@ for (let clicked of buttons) {
             getObject()
 
         } else if (this.getAttribute("data-type") === "checkSentence") {
-           
+                    
            checkSent()
 
-        } 
-    });
-}
+        } else if (this.getAttribute("data-type")==="help") {
+            document.getElementById("helpInstructions").style.display="block"
+        }
+    })
+    };
 
 /* game functions  */
 
@@ -91,12 +87,9 @@ img.src=imgFile
 
 /* generating answer options */
 
-
-
 let objOpt1= objToUse[0,'opt1'];
 let objOpt2= objToUse[0,'opt2'];
 let objOpt3= objToUse[0,'opt3'];
-
 
 document.getElementById("labOpt1").innerHTML=objOpt1
 document.getElementById("labOpt2").innerHTML=objOpt2
@@ -110,13 +103,13 @@ document.getElementById("opt3").value=objOpt3
 
 function checkSent() {
 
-    /** need to find how to recall what input radio was selected and submited */
+/** need to find how to recall what input radio was selected and submited */
 
 let correctAnswer= objToUse[0,'correctAnswer'];
 let displayPic=document.getElementById("result");
 let audio=document.getElementById("audioAnswer");
 
-    /* query selector from Geekforgeeks*/ 
+/* query selector from Geekforgeeks*/ 
 let checkRadio = document.querySelector(
         'input[name="answer"]:checked');
 
@@ -126,14 +119,27 @@ if (checkRadio.value === correctAnswer){
     audioAnswer.play();
     audioAnswer.loop=false;
     audioAnswer.volume=0.04; 
-} else {
+    rightAnswerCount();
+    increaseTries();
+
+} else if (checkRadio.value !== correctAnswer){
     displayPic.src="assets/images/wrong-answer.gif"
     audioAnswer.src="assets/audio/oops.mp3"
     audioAnswer.play();
     audioAnswer.loop=false;
     audioAnswer.volume=0.04;
-    
-
+    increaseTries();
 }
 }
 
+function rightAnswerCount() {
+
+let rightAnswerCount=parseInt(document.getElementById("correctAnswer").innerText);
+document.getElementById("correctAnswer").innerText=++rightAnswerCount;
+}
+
+function increaseTries() {
+
+let triesCount=parseInt(document.getElementById("tries").innerText);
+document.getElementById("tries").innerText=++triesCount;
+}
