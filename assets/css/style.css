@@ -97,7 +97,7 @@
     margin-bottom: 2%;
     
 }
-#helpInstructions {
+#helpInstructions, #finalResult {
     font-family: "PT Sans";
     font-weight: 600;
     width: 40%;
@@ -204,4 +204,8 @@ span {
     color: red;
     font-family: "PT Sans";
     font-weight: 600;
+}
+
+#answerLabel, #finalResult {
+    visibility: hidden;
 }

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    
+/*gameOn();*/  
 });
 /** background audio button */
     const music=document.getElementById("music");
@@ -42,6 +42,7 @@ let itemsInfo=[
     {img:19, opt1:"The t-shirt is orange.", opt2:"The skirt is yellow.", opt3:"The t-shirt is red.", correctAnswer:"The t-shirt is red.",},
     {img:20, opt1:"The t-shirt is orange.", opt2:"The t-shirt is red.", opt3:"The t-shirt is yellow.", correctAnswer:"The t-shirt is yellow.",},
 ]
+
 let buttons = document.getElementsByTagName("button")
 
     for (let clicked of buttons) {
@@ -62,18 +63,38 @@ let buttons = document.getElementsByTagName("button")
             document.getElementById("helpInstructions").style.visibility="visible";
         } else if (this.getAttribute("data-type") === "closeInstructions"){
             document.getElementById("helpInstructions").style.visibility="hidden";
+        } else if (this.getAttribute("data-type")=== "exit"){
+            exit();
         }
         
     })}
 
+function ramdomNumb() {
+    let numObj1 = Math.floor(Math.random() * itemsInfo.length)+1;
+    return numObj1
+console.log(numObj1)}
+
 /* game functions  */
+function ramdom() {
+    let numObj1 = Math.floor(Math.random() * itemsInfo.length)+1;
+    return numObj1
+console.log(numObj1)
+    /*let numObj=ramdomNumb()*/
+    let objToUse1=itemsInfo.find(({ img }) => img === numObj);
+return objToUse1
+console.log(objToUse1)
+}
 
-let numObj = Math.floor(Math.random() * itemsInfo.length)+1;
-
-let objToUse=itemsInfo.find(({ img }) => img === numObj);
 
 function getObject() {
-    
+
+    let objToUse=ramdom()
+    let numObj=ramdomNumb()
+    objToUse=itemsInfo.find(({ img }) => img === numObj);
+    console.log(objToUse)
+    console.log(numObj)
+    console.log("getObject triggered");
+    /*objToUse=itemsInfo.find(({ img }) => img === numObj);*/
 /* assigning ramdom image */    
 let img=document.getElementById("picture");
 let imgFile= `${imgFolder + numObj}.png`
@@ -84,17 +105,28 @@ img.src=imgFile
 let objOpt1= objToUse[0,'opt1'];
 let objOpt2= objToUse[0,'opt2'];
 let objOpt3= objToUse[0,'opt3'];
+let correctAnswer= objToUse[0,'correctAnswer'];
 
 document.getElementById("labOpt1").innerHTML=objOpt1
 document.getElementById("labOpt2").innerHTML=objOpt2
 document.getElementById("labOpt3").innerHTML=objOpt3
+document.getElementById("answerLabel").innerHTML=correctAnswer
 document.getElementById("opt1").value=objOpt1
 document.getElementById("opt2").value=objOpt2
 document.getElementById("opt3").value=objOpt3
+
+document.getElementById("checkSentence").style.visibility="visible";
+
+document.getElementById("opt1").checked=false;
+document.getElementById("opt2").checked=false;
+document.getElementById("opt3").checked=false;
 }
 
 function checkSent() {
-let correctAnswer= objToUse[0,'correctAnswer'];
+    console.log("checkSent triggered");
+
+let correctAnswer=document.getElementById("answerLabel").innerHTML
+
 let displayPic=document.getElementById("result");
 let audio=document.getElementById("audioAnswer");
 
@@ -110,7 +142,7 @@ if (checkRadio.value === correctAnswer){
     audioAnswer.volume=0.04; 
     rightAnswerCount();
     increaseTries();
-    
+    document.getElementById("checkSentence").style.visibility="hidden";
 } else if (checkRadio.value !== correctAnswer){
     displayPic.src="assets/images/wrong-answer.gif"
     audioAnswer.src="assets/audio/oops.mp3"
@@ -122,15 +154,33 @@ if (checkRadio.value === correctAnswer){
 }
 
 function rightAnswerCount() {
+    console.log("rightAnswerCount triggered");
 
 let rightAnswerCount=parseInt(document.getElementById("correctAnswer").innerText);
 document.getElementById("correctAnswer").innerText=++rightAnswerCount;
+    console.log("rightAnswerCount", rightAnswerCount);
 }
 
 function increaseTries() {
+    console.log("increaseTries triggered");
 
 let triesCount=parseInt(document.getElementById("tries").innerText);
 
 document.getElementById("tries").innerText=++triesCount;
-
+let gotRight=parseInt(document.getElementById("correctAnswer").innerHTML)
+    console.log("triesCount", triesCount);
+    if (triesCount>= 10) {
+        document.getElementById("finalResultText").innerHTML=`You got ${gotRight} of ${triesCount}`;
+        /*alert(`you got ${gotRight} of ${triesCount}`)*/
+        document.getElementById("finalResult").style.visibility="visible";
+        setTimeout("location.reload(true);",4000);
+        } 
 }
+
+function exit() {
+    console.log("exit triggered");
+    let exitYes = confirm("Do you want to exit the game?");
+    if (exitYes)
+        {alert("Try again soon!");
+            setTimeout("location.reload(true);",800);}
+    }

@@ -22,7 +22,7 @@
     <div id="startAudio">
       <button data-type="help"><i class="fas fa-question fa-2x"></i></button>
       <button id="music">🔉</button>
-      <audio src="assets/audio/komiku_-_12_-_bicycle.wav" id="audio" autoplay></audio>
+      <audio src="assets/audio/komiku_-_12_-_bicycle.wav" id="audio"></audio>
     </div>
     </header>
     <div class="border" id="cover">
@@ -40,6 +40,9 @@
       </ol>
       <p>Good luck!</p>
     </div>
+    <div id="finalResult">
+      <p id="finalResultText"></p>
+    </div>
     <div class="border" id="game-zone">
       <div class="border" id="pic-zone">
         <div id="image">
@@ -56,6 +59,7 @@
           <label for="opt2" id="labOpt2">?</label></br>
           <input type="radio" id="opt3" name="answer" value="">
           <label for="opt3" id="labOpt3">?</label></br>
+          <label id="answerLabel"></label>
         </form>
 
         </div>
@@ -76,7 +80,7 @@
         <span> Score:<span id="correctAnswer"> 0 </span> de <span id="tries"> 0 </span> </span>
       </div>
       <div id="exitDiv">
-        <button id="exit">Exit 👉</button>
+        <button id="exit" data-type="exit">Exit 👉</button>
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
