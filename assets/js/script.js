@@ -1,9 +1,10 @@
+document.addEventListener("DOMContentLoaded", function () {
+    
+});
 /** background audio button */
     const music=document.getElementById("music");
     const audio=document.getElementById("audio");
-    
-    let playOn=false
-    
+       
     music.addEventListener("click",function(){
        if (music.innerHTML==="🔉"){
                 audio.play();
@@ -17,7 +18,6 @@
      });
 
 /* variabale and array with data for functions, will be assign to variables for their use */
-
 const imgFolder="assets/images/"
 
 let itemsInfo=[ 
@@ -42,44 +42,38 @@ let itemsInfo=[
     {img:19, opt1:"The t-shirt is orange.", opt2:"The skirt is yellow.", opt3:"The t-shirt is red.", correctAnswer:"The t-shirt is red.",},
     {img:20, opt1:"The t-shirt is orange.", opt2:"The t-shirt is red.", opt3:"The t-shirt is yellow.", correctAnswer:"The t-shirt is yellow.",},
 ]
-
-/* welcome div */
-
-let start=document.getElementById("start");
-let cover=document.getElementById("cover");
-
-start.addEventListener("click",function() {
-    cover.style.visibility="hidden";
-    start.style.visibility="hidden";    
-})
-
-/* buttons click event */
-
 let buttons = document.getElementsByTagName("button")
 
-for (let clicked of buttons) {
+    for (let clicked of buttons) {
     clicked.addEventListener("click", function() {
-        if (this.getAttribute("data-type") === "getObject") {
-
+        if (this.getAttribute("data-type")==="startButton"){
+            cover.style.visibility="hidden";
+            start.style.visibility="hidden"; 
+        }
+        else if (this.getAttribute("data-type") === "getObject") {
+            
             getObject()
 
         } else if (this.getAttribute("data-type") === "checkSentence") {
                     
            checkSent()
 
-        } else if (this.getAttribute("data-type")==="help") {
-            document.getElementById("helpInstructions").style.display="block"
+        } else if (this.getAttribute("data-type") === "help"){
+            document.getElementById("helpInstructions").style.visibility="visible";
+        } else if (this.getAttribute("data-type") === "closeInstructions"){
+            document.getElementById("helpInstructions").style.visibility="hidden";
         }
-    })
-    };
+        
+    })}
 
 /* game functions  */
 
 let numObj = Math.floor(Math.random() * itemsInfo.length)+1;
+
 let objToUse=itemsInfo.find(({ img }) => img === numObj);
 
 function getObject() {
-
+    
 /* assigning ramdom image */    
 let img=document.getElementById("picture");
 let imgFile= `${imgFolder + numObj}.png`
@@ -94,17 +88,12 @@ let objOpt3= objToUse[0,'opt3'];
 document.getElementById("labOpt1").innerHTML=objOpt1
 document.getElementById("labOpt2").innerHTML=objOpt2
 document.getElementById("labOpt3").innerHTML=objOpt3
-
 document.getElementById("opt1").value=objOpt1
 document.getElementById("opt2").value=objOpt2
 document.getElementById("opt3").value=objOpt3
-
 }
 
 function checkSent() {
-
-/** need to find how to recall what input radio was selected and submited */
-
 let correctAnswer= objToUse[0,'correctAnswer'];
 let displayPic=document.getElementById("result");
 let audio=document.getElementById("audioAnswer");
@@ -121,7 +110,7 @@ if (checkRadio.value === correctAnswer){
     audioAnswer.volume=0.04; 
     rightAnswerCount();
     increaseTries();
-
+    
 } else if (checkRadio.value !== correctAnswer){
     displayPic.src="assets/images/wrong-answer.gif"
     audioAnswer.src="assets/audio/oops.mp3"
@@ -141,5 +130,7 @@ document.getElementById("correctAnswer").innerText=++rightAnswerCount;
 function increaseTries() {
 
 let triesCount=parseInt(document.getElementById("tries").innerText);
+
 document.getElementById("tries").innerText=++triesCount;
+
 }

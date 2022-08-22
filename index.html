@@ -27,7 +27,18 @@
     </header>
     <div class="border" id="cover">
       <img id="coverPic" src="assets/images/dancing-boy.gif">
-      <button class="button" id="start">Start!</button>
+      <button class="button" id="start" data-type="startButton">Start!</button>
+    </div>
+    <div id="helpInstructions" ;>
+      <button id="closeInstructions" data-type="closeInstructions">X</button>
+      <p>Objetive of the game is to score 10 of 10, at the try number 10, game will stop and give you the score achived.</p>
+      <ol>
+        <li>Press the button "Get a Picture"</li>
+        <li>Look at the picture and select the sentence that describe it.</li>
+        <li>Press the button "Check your Answer"</li>
+        <li>You will get a result animation and your score will be increased.</li>
+      </ol>
+      <p>Good luck!</p>
     </div>
     <div class="border" id="game-zone">
       <div class="border" id="pic-zone">
@@ -58,6 +69,8 @@
       </div>
       
     </div>
+    
+
     <footer class="border" id="score">
       <div id="score-box">
         <span> Score:<span id="correctAnswer"> 0 </span> de <span id="tries"> 0 </span> </span>
@@ -70,16 +83,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 
-    <div id="helpInstructions" style="display: none";>
-      <p>Objetive of the game is to score 10 of 10, at the try number 10, game will stop and give you the score achived.</p>
-      <ol>
-        <li>Press the button "Get a Picture"</li>
-        <li>Look at the picture and select the sentence that describe the picture.</li>
-        <li>Press the button "Check your Answer"</li>
-        <li>You will get a result animation and your score will be increased.</li>
-      </ol>
-    </div>
-    <script src="assets/js/script.js"></script>
+        <script src="assets/js/script.js"></script>
   </body>
 
 </html>

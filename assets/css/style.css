@@ -92,13 +92,24 @@
     display: flex;
     justify-content: flex-end;
 }
-/*
+#closeInstructions {
+    margin-left:95%;
+    margin-bottom: 2%;
+    
+}
 #helpInstructions {
+    font-family: "PT Sans";
+    font-weight: 600;
     width: 40%;
-    height: 30%;
+    height: 35%;
+    margin-top: 10%;
+    margin-left: 30%;
+    padding: 2%;
+    background-color: #ff444b;
     z-index: 5;
     position: fixed;
-}*/
+    visibility: hidden;
+}
 
 /* styling modal */
 
@@ -125,7 +136,7 @@
 
 #getPic {
     margin-top: 10em;
-    margin-right: 6em;
+    margin-left: 4%;
 }
 
 /* styling answer zone*/
