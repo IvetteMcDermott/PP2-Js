@@ -27,25 +27,28 @@
     </header>
 <!-- div visible when starting the game and hide for let you access the exercise -->    
     <div class="border" id="cover">
-      <img id="coverPic" src="assets/images/dancing-boy.gif">
+      <img id="coverPic" src="assets/images/dancing-boy.gif" alt="dancing boy">
       <button class="button" id="start" data-type="startButton">Start!</button>
+      <h1 id="coverText">Learning is Fun! Click Start ...</h1>
     </div>
 <!-- div with instructions, visibility controlled with the button in header -->
-    <div id="helpInstructions" ;>
+    <div id="transpCover"> <div id="helpInstructions">
       <button id="closeInstructions" data-type="closeInstructions">X</button>
+      <h2>Instructions</h2>
       <p>Objetive of the game is to score 10 of 10, at the try number 10, game will stop and give you the score achived.</p>
       <ol>
         <li>Press the button "Get a Picture"</li>
-        <li>Look at the picture and select the sentence that describe it.</li>
+        <li>Look at the picture and select the sentence that describes it.</li>
         <li>Press the button "Check your Answer"</li>
         <li>You will get a result animation and your score will be increased.</li>
       </ol>
       <p>Good luck!</p>
-    </div>
+    </div></div>
 <!-- div that display the final results, it will be display when triesCount gets to 10 -->
     <div id="finalResult">
-      <p id="finalResultText"></p>
-      <p id="finalResultMessage"></p>
+      <p id="finalResultText" class="textFinal"></p>
+      <p id="finalResultMessage" class="textFinal"></p>
+      <img id="finalResultImg" src="assets/images/party-popper-confetti.gif" alt="celebration pic">
     </div>
 <!-- div that contain the game/exercise -->
     <div class="border" id="game-zone">
@@ -53,27 +56,27 @@
         <div id="image">
           <img id="picture" src="assets/images/incognite.png" alt="incognite">
         </div>
-        <button class="button" class="toShow" id="getPic" data-type="getObject">Get a picture</button>
+        <button class="button" id="getPic" data-type="getObject">Get a picture</button>
       </div>
       <div class="border" id="answer-zone">
         <div class="border" id="pickAnswer">
           <form id="answerForm">
           <input type="radio" id="opt1" name="answer" value="">
-          <label for="opt1" id="labOpt1">?</label></br>
+          <label for="opt1" id="labOpt1">?</label><br>
           <input type="radio" id="opt2" name="answer" value="">
-          <label for="opt2" id="labOpt2">?</label></br>
+          <label for="opt2" id="labOpt2">?</label><br>
           <input type="radio" id="opt3" name="answer" value="">
-          <label for="opt3" id="labOpt3">?</label></br>
+          <label for="opt3" id="labOpt3">?</label><br>
           <label id="answerLabel"></label>
         </form>
         </div>
         <div class="border" id="resultButton">
-          <button class="button" class="toShow" id="checkSentence" data-type="checkSentence">Check your answer</button>
+          <button class="button" id="checkSentence" data-type="checkSentence">Check your answer</button>
         </div>
 <!-- contains the img element where will be display the animation accorder to the answer submit -->
         <div class="border" id="showResult">
           <img src="assets/images/bitting-nails.gif" id="result" alt="result animation">
-          <audio src="" id="audioAnswer">.</audio>
+          <audio src="assets/audio/woohoo.mp3" id="audioAnswer">.</audio>
         </div>
       </div>
       

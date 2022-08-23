@@ -49,11 +49,15 @@ let buttons = document.getElementsByTagName("button")
         if (this.getAttribute("data-type")==="startButton"){
             cover.style.visibility="hidden";
             start.style.visibility="hidden"; 
+            document.getElementById("helpInstructions").style.visibility="visible";
         }
         else if (this.getAttribute("data-type") === "getObject") {
+            document.getElementById("getPic").style.visibility="hidden";
+
             getObject()
         } else if (this.getAttribute("data-type") === "checkSentence") {
-           checkSent()
+
+            checkSent()
         } else if (this.getAttribute("data-type") === "help"){
             document.getElementById("helpInstructions").style.visibility="visible";
         } else if (this.getAttribute("data-type") === "closeInstructions"){
@@ -124,6 +128,8 @@ if (checkRadio.value === correctAnswer){
     rightAnswerCount();
     increaseTries();
     document.getElementById("checkSentence").style.visibility="hidden";
+    document.getElementById("getPic").style.visibility="visible";
+
 } else if (checkRadio.value !== correctAnswer){
     displayPic.src="assets/images/wrong-answer.gif"
     audioAnswer.src="assets/audio/oops.mp3"
@@ -153,10 +159,17 @@ let gotRight=parseInt(document.getElementById("correctAnswer").innerHTML)
         let finalMessage=""
         if (gotRight<=4){
             finalMessage="Good try! Keep the practice."
+            document.getElementById("finalResultImg").src="assets/images/reach-sad.gif";
+            document.getElementById("finalResultImg").style.visibility="visible"; 
         } else if (gotRight=5 && gotRight<=8) {
             finalMessage="Well done! Keep the good work."
+            document.getElementById("finalResultImg").src="assets/images/qoobee-agapi.gif";
+            document.getElementById("finalResultImg").style.visibility="visible"; 
         } else {
             finalMessage="Excellent job!"
+            document.getElementById("finalResultImg").src="assets/images/party-popper-confetti.gif";
+            document.getElementById("finalResultImg").style.visibility="visible";                                            
+
         }
         document.getElementById("finalResultMessage").innerHTML=finalMessage;
         
