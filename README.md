@@ -31,6 +31,41 @@ ___________
 ## Features
 ___________
 
+
+
+![NSolid](https://share.balsamiq.com/c/oAhej9aYXz5zwZC95REDcG.png)
+
+buttons
+
+![NSolid](https://share.balsamiq.com/c/XxvD88yD5FdrY7kstbxKZ.png)
+
+buttons
+
+![NSolid](https://share.balsamiq.com/c/vfCLsMmLpEDnuBUQukNqCL.png)
+
+buttons
+
+![NSolid](https://share.balsamiq.com/c/vfCLsMmLpEDnuBUQukNqCL.png)
+
+buttons
+
+![NSolid](https://share.balsamiq.com/c/baYCU5vjysAfhYjzmvBrcy.png)
+
+buttons
+
+![NSolid](https://share.balsamiq.com/c/bT7LDd1Cct5VWz2UXKfzXC.png)
+
+
+button 
+
+![NSolid](https://share.balsamiq.com/c/2Z8iagiKKq7eL84ZjWgeve.png)
+
+buttons
+
+![NSolid](https://share.balsamiq.com/c/esZCbYVTXNvmR7khmHEbi6.png)
+
+buttons
+
 <br>
 
 ## Design
