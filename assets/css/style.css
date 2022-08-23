@@ -1,180 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
 
-#headZone {
-    display: flex;
-}
-
-#title {
-    width: 60%;
-    display: flex;
-    justify-content: flex-start;
-    font-size: 2em;
-}
-
-#startAudio {
-    width:40%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-#music {
-    margin-left: .4em;
-    font-size: 2em;
-}
-/* styling the divs*/
-
-#game-zone {
-    background-color: aquamarine;
-}
-
-#pic-zone {
-    width: 60%;
-    height: 58%;
-    margin: auto;
-    padding: .5em;
-    background-color: coral;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    margin-top:.5em;
-    margin-bottom: .5em;
-}
-
-#answer-zone {
-    display: flex;
-    justify-content: space-around;
-}
-
-#pickAnswer, #resultButton, #showResult {
-    background-color: rgb(0, 255, 179);
-}
-
-#resultButton {
-    width: 15em;
-    height: 15em;
-    padding: .5em;
-    align-items: center;
-    margin: .5em;
-    display: flex;
-    align-content: space-around;
-    justify-content: center;
-}
-
-#showResult{
-    width: 15em;
-    height: 15em;
-    padding: .5em;
-    align-items: center;
-    margin: .5em;
-    display: flex;
-    align-content: space-around;
-    justify-content: center;
-}
-
-#result {
-    object-fit: cover;
-    width: 15em;
-    height: 15em;
-}
-
-#score {
-    display: flex;
-}
-
-#score-box {
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-#exitDiv {
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-}
-#closeInstructions {
-    margin-left:95%;
-    margin-bottom: 2%;
-    
-}
-#helpInstructions, #finalResult {
-    font-family: "PT Sans";
-    font-weight: 600;
-    width: 40%;
-    height: 35%;
-    margin-top: 10%;
-    margin-left: 30%;
-    padding: 2%;
-    background-color: #ff444b;
-    z-index: 5;
-    position: fixed;
-    visibility: hidden;
-}
-
-/* styling modal */
-
-#cover {
-    background-color: orange!important;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    position: fixed;
-    z-index: 1;
-}
-
-/* styling the image zone */
-
-#image, #picture {
-    width: 30em;
-    height: 26em;
-    margin-left: 4em;
-}
-
-#picture{
-    border: 2px solid aqua
-}
-
-#getPic {
-    margin-top: 10em;
-    margin-left: 4%;
-}
-
-/* styling answer zone*/
-
-#answer-zone {
-    display:flex;
-}
-
-#pickAnswer {
-    font-family: "PT Sans";
-    width: 15em;
-    height: 15em;
-    margin:.5em;   
-    padding:.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-/* styling cover */
-
-#start {
-    position: fixed;
-    margin-top: 25%;
-    margin-left: 17%;
-    font-family: "PT Sans";
-    font-size: 1.3em;
-    font-weight: 900;
-    color: rgb(21, 21, 92);
-}
-
-#coverPic {
-    position:relative;
-    margin-top: 6%;
-    margin-left: 17%;
-}
-
 /* general styling */
 
 .border {
@@ -199,6 +24,159 @@ span {
     color: rgb(21, 21, 92);
 }
 
+
+/* styling cover div */
+#cover {
+    background-color: orange!important;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 1;
+}
+#start {
+    position: fixed;
+    margin-top: 25%;
+    margin-left: 17%;
+    font-family: "PT Sans";
+    font-size: 1.3em;
+    font-weight: 900;
+    color: rgb(21, 21, 92);
+}
+
+#coverPic {
+    position:relative;
+    margin-top: 6%;
+    margin-left: 17%;
+}
+
+/* styling head */
+#headZone {
+    display: flex;
+}
+
+#title {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2em;
+}
+
+#startAudio {
+    width:40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#music {
+    margin-left: .4em;
+    font-size: 2em;
+}
+
+/* styling the game zone and inside divs*/
+
+#game-zone {
+    background-color: aquamarine;
+}
+
+#pic-zone {
+    width: 60%;
+    height: 58%;
+    margin: auto;
+    padding: .5em;
+    background-color: coral;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top:.5em;
+    margin-bottom: .5em;
+}
+/* styling the picture to describe */
+#image, #picture {
+    width: 30em;
+    height: 26em;
+    margin-left: 4em;
+}
+
+#picture{
+    border: 2px solid aqua
+}
+/* get a picture button */
+#getPic {
+    margin-top: 10em;
+    margin-left: 4%;
+}
+
+/* styling answer zone*/
+#answer-zone {
+    display:flex;
+}
+/* inputs radio options */
+#pickAnswer {
+    font-family: "PT Sans";
+    width: 15em;
+    height: 15em;
+    margin:.5em;   
+    padding:.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#answer-zone {
+    display: flex;
+    justify-content: space-around;
+}
+/* background color for answer area divs */
+#pickAnswer, #resultButton, #showResult {
+    background-color: rgb(0, 255, 179);
+}
+
+#resultButton {
+    width: 15em;
+    height: 15em;
+    padding: .5em;
+    align-items: center;
+    margin: .5em;
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+}
+
+/* div and img that display the result animation */
+#showResult{
+    width: 15em;
+    height: 15em;
+    padding: .5em;
+    align-items: center;
+    margin: .5em;
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+}
+
+#result {
+    object-fit: cover;
+    width: 15em;
+    height: 15em;
+}
+/* styling footer */
+#score {
+    display: flex;  
+}
+
+#score-box {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#exitDiv {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
 #exit {
     width: 5em;
     color: red;
@@ -206,6 +184,26 @@ span {
     font-weight: 600;
 }
 
-#answerLabel, #finalResult {
+/* styling the instructions and result div*/
+#helpInstructions, #finalResult {
+    font-family: "PT Sans";
+    font-weight: 600;
+    width: 40%;
+    height: 37%;
+    margin-top: 10%;
+    margin-left: 30%;
+    padding: 2%;
+    background-color: #ff444b;
+    z-index: 5;
+    position: fixed;
     visibility: hidden;
 }
+#closeInstructions {
+    margin-left:95%;
+    margin-bottom: 2%;   
+}
+/* hide the answer label, this is used just for recall data in js */
+#answerLabel {
+    visibility: hidden;
+}
+

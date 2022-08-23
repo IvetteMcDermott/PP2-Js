@@ -14,7 +14,7 @@
   </head>
 
   <body>
-
+<!-- header contains the title and the help/instructions button plus the audio control button -->
     <header id="headZone">
       <div id="title">
       <h1>🕹️ Let's play!</h1>
@@ -25,10 +25,12 @@
       <audio src="assets/audio/komiku_-_12_-_bicycle.wav" id="audio"></audio>
     </div>
     </header>
+<!-- div visible when starting the game and hide for let you access the exercise -->    
     <div class="border" id="cover">
       <img id="coverPic" src="assets/images/dancing-boy.gif">
       <button class="button" id="start" data-type="startButton">Start!</button>
     </div>
+<!-- div with instructions, visibility controlled with the button in header -->
     <div id="helpInstructions" ;>
       <button id="closeInstructions" data-type="closeInstructions">X</button>
       <p>Objetive of the game is to score 10 of 10, at the try number 10, game will stop and give you the score achived.</p>
@@ -40,9 +42,12 @@
       </ol>
       <p>Good luck!</p>
     </div>
+<!-- div that display the final results, it will be display when triesCount gets to 10 -->
     <div id="finalResult">
       <p id="finalResultText"></p>
+      <p id="finalResultMessage"></p>
     </div>
+<!-- div that contain the game/exercise -->
     <div class="border" id="game-zone">
       <div class="border" id="pic-zone">
         <div id="image">
@@ -61,11 +66,11 @@
           <label for="opt3" id="labOpt3">?</label></br>
           <label id="answerLabel"></label>
         </form>
-
         </div>
         <div class="border" id="resultButton">
           <button class="button" class="toShow" id="checkSentence" data-type="checkSentence">Check your answer</button>
         </div>
+<!-- contains the img element where will be display the animation accorder to the answer submit -->
         <div class="border" id="showResult">
           <img src="assets/images/bitting-nails.gif" id="result" alt="result animation">
           <audio src="" id="audioAnswer">.</audio>
@@ -73,8 +78,7 @@
       </div>
       
     </div>
-    
-
+<!-- footer that includes the score and an exit button -->
     <footer class="border" id="score">
       <div id="score-box">
         <span> Score:<span id="correctAnswer"> 0 </span> de <span id="tries"> 0 </span> </span>
@@ -83,6 +87,7 @@
         <button id="exit" data-type="exit">Exit 👉</button>
       </div>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
