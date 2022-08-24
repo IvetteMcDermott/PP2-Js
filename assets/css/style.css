@@ -215,7 +215,6 @@ span {
     z-index: 5;
     position: fixed;
     visibility: hidden;
-    transition: visibility 0s, opacity 0.5s, lineal;
 }
 #finalResultImg {
     width: 18%;
