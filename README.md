@@ -190,6 +190,18 @@ ___________
 
 ## Deployment
 ___________
+The website had been deployed on GitHub from the main branch on the repository PP2-Js, following the steps that had been mark in the screenshot as listed here:
+
+1. Settings
+2. Pages.
+3. Branch main.
+4. Site URL address is show.
+
+<br>
+
+![NSolid](https://share.balsamiq.com/c/a6tnq5QiiznugdZYD9XZNL.png)
+
+
 
 <br>
 
