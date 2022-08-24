@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
 
+/* mediaQuery */
+
 /* general styling */
 h1 {
     font-family: "PT Sans";
@@ -102,14 +104,16 @@ span {
     margin-bottom: .5em;
 }
 /* styling the picture to describe */
-#image, #picture {
-    width: 30em;
-    height: 26em;
+#image  {
+    width: 50%;
+    height: 30%;
     margin-left: 4em;
 }
 
 #picture{
-    border: 2px solid aqua
+    object-fit: cover;
+    border: 2px solid aqua;
+
 }
 /* get a picture button */
 #getPic {
@@ -172,6 +176,10 @@ span {
     height: 15em;
 }
 /* styling footer */
+#footer{
+    position: absolute;
+    display: flex;
+}
 #score {
     display: flex;  
 }
