@@ -56,65 +56,81 @@ ___________
 
 Included features by screen
 
-- ### The welcome screen 
+### The welcome screen 
 
-- Intructions Button: It displays a div as pop up, where the instructions can be red.
-- Bacground Button: It allows the user to play or pause a background audio.
-- Start Button: It hides the welcome screen and allows the user to visualize the next one.
+- **Intructions Button:** It displays a div as pop up, where the instructions can be red.
+- **Bacground Button:** It allows the user to play or pause a background audio.
+- **Start Button:** It hides the welcome screen and allows the user to visualize the next one.
 
-- Other elements: the welcome screen also contains a gif element that is apealing to targeted user, and texts used as title 
+- **Other elements:** the welcome screen also contains a gif element that is apealing to targeted user, and texts used as title 
 
 ![NSolid](https://share.balsamiq.com/c/oAhej9aYXz5zwZC95REDcG.png)
 
-- ### The main game screen
+### The main game screen
 
-- Closed Button: It hides the pop up div that contains the intructions.
+- **Closed Button:** It hides the pop up div that contains the intructions.
 
-- Other elements: the game can be visualized in the behind the div, the buttons for audio and exit can be used from this screen.
+- **Other elements:** the game can be visualized in the behind the div, the buttons for audio and exit can be used from this screen.
 
 ![NSolid](https://share.balsamiq.com/c/XxvD88yD5FdrY7kstbxKZ.png)
 
-- ### The game screen
+### The game screen
 
-- Get a picture Button: It runs a function that generate a ramdom number, which is used for search for the corresponding object in the array and assign it to a variable that will be used in the next steps. In the screen, this action will display the image and its answer options.
-
-![NSolid](https://share.balsamiq.com/c/vfCLsMmLpEDnuBUQukNqCL.png)
-
-- Input radios: They contain the answer options and it will allow the user to select one of them at the time. 
-- Check your answer Button: When click it will compare the user selected input with the correct answer. This will give a feedback display a gif in the "animation for answer div" plus and audio related to it. 
+- **Get a picture Button:** It runs a function that generate a ramdom number, which is used for search for the corresponding object in the array and assign it to a variable that will be used in the next steps. In the screen, this action will display the image and its answer options.
 
 ![NSolid](https://share.balsamiq.com/c/vfCLsMmLpEDnuBUQukNqCL.png)
 
-buttons
+- **Input radios:** They contain the answer options and it will allow the user to select one of them at the time. 
+- **Check your answer Button:** When click it will compare the user selected input with the correct answer. This will give a feedback display a gif in the "animation for answer div" plus and audio related to it. 
 
 ![NSolid](https://share.balsamiq.com/c/baYCU5vjysAfhYjzmvBrcy.png)
 
-buttons
+- **Animation for answer:** Div that contains a gif according to the result of the input selected, it will be display as feedback if it was right or wrong, as show in the following image.
 
 ![NSolid](https://share.balsamiq.com/c/bT7LDd1Cct5VWz2UXKfzXC.png)
 
-
-button 
+- **Final Result Div:** It will be display on top of the game when the score reach to 10 tries. It contains the score in a text, a encorauging message and a gif. The message and gif will variate according to the final score.
 
 ![NSolid](https://share.balsamiq.com/c/2Z8iagiKKq7eL84ZjWgeve.png)
 
-buttons
+- **Gif on final result div:** According to the final result will be as follow
 
 ![NSolid](https://share.balsamiq.com/c/esZCbYVTXNvmR7khmHEbi6.png)
 
-buttons
-
 <br>
+
+**Features that can be implement in the future**
+
+- There always can be increase the array with new objects and this way increase the vocabulary to use. 
+- It could be implemented a form that send the results to a data base or the teacher or tutor of the children email.
+- It could be included a report that show a full list of the selected answers, indicating if they were right or wrong.
 
 ## Design
 ___________
+The game had been created from zero, but had been influeced by exercises pages for children like British Council where different types of practice exercises can be found.
 
-[Wireframes](https://share.balsamiq.com/c/8RjqARgW8qAXxcvg1BcgMo.png)
+Colour scheme had been pic in base a https://coolors.co/ selection.
+
+Typography, the font used for the website is PT Sans from Google Fonts. Easy to read in any element.
+
+[Wireframes](https://share.balsamiq.com/c/8RjqARgW8qAXxcvg1BcgMo.png) work to do yet
 
 <br>
 
 ## Technologies Used 
 ___________
+
+**Languages**
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+**Other resources**
+- [GitHub](https://github.com/)
+- [GitPod](https://www.gitpod.io/)
+- [Balsamiq](https://balsamiq.com/)
+- [Google Fonts](https://fonts.google.com/)
 
 <br>
 
@@ -143,8 +159,9 @@ ___________
 ## Credits
 ___________
 
-gifs  https://tenor.com/ 
+- [Get Emoji](https://getemoji.com/) Emoji used in the title and name had been copied from this site.
+- [Tenor](https://tenor.com/) Gifs used in the website had been obtain from this site.
 
-/* query selector from Geekforgeeks*/ 
-let checkRadio = document.querySelector(
-        'input[name="answer"]:checked');
+ While no code had been copied completely, through research and problem solving I had learn and found solutions in different blogs and websites, as listed below.    
+
+- [GeeksforGeeks](https://www.geeksforgeeks.org/)
