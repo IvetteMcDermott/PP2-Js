@@ -53,10 +53,11 @@
 <!-- div that contain the game/exercise -->
     <div class="border" id="game-zone">
       <div class="border" id="pic-zone">
-        <div id="image">
-          <img id="picture" src="assets/images/incognite.png" alt="incognite">
+        <img id="picture" src="assets/images/incognite.png" alt="incognite">
+        <div id="buttons">
+          <button class="button" id="getPic" data-type="getObject">Get a picture</button>
+          <button class="button" id="checkSentence" data-type="checkSentence">Check your answer</button>
         </div>
-        <button class="button" id="getPic" data-type="getObject">Get a picture</button>
       </div>
       <div class="border" id="answer-zone">
         <div class="border" id="pickAnswer">
@@ -69,9 +70,6 @@
           <label for="opt3" id="labOpt3">?</label><br>
           <label id="answerLabel"></label>
         </form>
-        </div>
-        <div class="border" id="resultButton">
-          <button class="button" id="checkSentence" data-type="checkSentence">Check your answer</button>
         </div>
 <!-- contains the img element where will be display the animation accorder to the answer submit -->
         <div class="border" id="showResult">

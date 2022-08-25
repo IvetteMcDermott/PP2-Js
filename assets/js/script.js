@@ -1,23 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
 });
-/** background audio control button, play/pause */
-    const music=document.getElementById("music");
-    const audio=document.getElementById("audio");
-       
-    music.addEventListener("click",function(){
-       if (music.innerHTML==="🔉"){
-                audio.play();
-                audio.loop=true;
-                audio.volume=0.06;
-                music.innerHTML="🔇";}
-                else {
-                    audio.pause();
-                    music.innerHTML="🔉";
-                }            
-     });
-
 /* variabale and array with data for functions, will be assign to variables for their use */
 const imgFolder="assets/images/";
+const music=document.getElementById("music");
+const audio=document.getElementById("audio");
+const labOpt1=document.getElementById("labOpt1");
+const labOpt2=document.getElementById("labOpt2");
+const labOpt3=document.getElementById("labOpt3");
+const answerLabel=document.getElementById("answerLabel"); 
+const opt1=document.getElementById("opt1");
+const opt2=document.getElementById("opt2");
+const opt3=document.getElementById("opt3");
+const img=document.getElementById("picture");
+const getPicButton=document.getElementById("getPic");
+const checkSentenceButton=document.getElementById("checkSentence");
+const helpInstructions=document.getElementById("helpInstructions")
+
+checkSentenceButton.classList.add("invisible");
 
 let itemsInfo=[ 
     {img:1, opt1:"The socks are green.", opt2:"The pants are blue.", opt3:"The coat is yellow.", correctAnswer:"The pants are blue.",},
@@ -41,27 +40,42 @@ let itemsInfo=[
     {img:19, opt1:"The t-shirt is orange.", opt2:"The skirt is yellow.", opt3:"The t-shirt is red.", correctAnswer:"The t-shirt is red.",},
     {img:20, opt1:"The t-shirt is orange.", opt2:"The t-shirt is red.", opt3:"The t-shirt is yellow.", correctAnswer:"The t-shirt is yellow.",},
 ];
+/** background audio control button, play/pause */
+   
+music.addEventListener("click",function(){
+   if (music.innerHTML==="🔉"){
+            audio.play();
+            audio.loop=true;
+            audio.volume=0.06;
+            music.innerHTML="🔇";}
+            else {
+                audio.pause();
+                music.innerHTML="🔉";
+            }            
+ });
+
 /** click event for buttons */
 let buttons = document.getElementsByTagName("button");
 
     for (let clicked of buttons) {
     clicked.addEventListener("click", function() {
         if (this.getAttribute("data-type")==="startButton"){
-            let cover=document.getElementById("cover");
-  					let start=document.getElementById("start");
-  					cover.style.visibility="hidden";
-            start.style.visibility="hidden"; 
-            document.getElementById("helpInstructions").style.visibility="visible";
+            const cover=document.getElementById("cover");
+  			const start=document.getElementById("start");
+  			cover.classList.add("invisible");
+            start.classList.add("invisible"); 
+            helpInstructions.style.visibility="visible";
         }
         else if (this.getAttribute("data-type") === "getObject") {
-            document.getElementById("getPic").style.visibility="hidden";
+            getPicButton.classList.add("invisible");
+            checkSentenceButton.classList.remove("invisible");
             getObject();
         } else if (this.getAttribute("data-type") === "checkSentence") {
             checkSent();
         } else if (this.getAttribute("data-type") === "help"){
-            document.getElementById("helpInstructions").style.visibility="visible";
+            helpInstructions.style.visibility="visible";
         } else if (this.getAttribute("data-type") === "closeInstructions"){
-            document.getElementById("helpInstructions").style.visibility="hidden";
+            helpInstructions.style.visibility="hidden";
         } else if (this.getAttribute("data-type")=== "exit"){
             exit();
         }        
@@ -73,18 +87,13 @@ function ramdomNumb() {
     return numObj1;
 }
 
-function ramdom() {
-    let numObj1 = Math.floor(Math.random() * itemsInfo.length)+1;
-    return numObj1;
-}
 /** display the picture and the answer options */
 function getObject() {
-    let objToUse=ramdom();
+    let objToUse
     let numObj=ramdomNumb();
     objToUse=itemsInfo.find(({ img }) => img === numObj);
-    
+
 /* assigning ramdom image */    
-let img=document.getElementById("picture");
 let imgFile= `${imgFolder + numObj}.png`;
 img.src=imgFile;
 
@@ -93,45 +102,44 @@ let objOpt1= objToUse[0,'opt1'];
 let objOpt2= objToUse[0,'opt2'];
 let objOpt3= objToUse[0,'opt3'];
 let correctAnswer= objToUse[0,'correctAnswer'];
-/* assigning answer options */
-document.getElementById("labOpt1").innerHTML=objOpt1;
-document.getElementById("labOpt2").innerHTML=objOpt2;
-document.getElementById("labOpt3").innerHTML=objOpt3;
-document.getElementById("answerLabel").innerHTML=correctAnswer;
-document.getElementById("opt1").value=objOpt1;
-document.getElementById("opt2").value=objOpt2;
-document.getElementById("opt3").value=objOpt3;
-/** display the button that compare the answer selected with the correct one, when get a new picture */
-document.getElementById("checkSentence").style.visibility="visible";
+
 /** set radios to unchecked */
-document.getElementById("opt1").checked=false;
-document.getElementById("opt2").checked=false;
-document.getElementById("opt3").checked=false;
+opt1.checked=false;
+opt2.checked=false;
+opt3.checked=false;
+
+/* assigning answer options */
+labOpt1.innerHTML=objOpt1;
+labOpt2.innerHTML=objOpt2;
+labOpt3.innerHTML=objOpt3;
+answerLabel.innerHTML=correctAnswer;
+opt1.value=objOpt1;
+opt2.value=objOpt2;
+opt3.value=objOpt3;
 }
 /** function that check the answer selected */
 function checkSent() {
-    
+
+const displayPic=document.getElementById("result");
+const audio=document.getElementById("audioAnswer");
 let correctAnswer=document.getElementById("answerLabel").innerHTML;
-let displayPic=document.getElementById("result");
-let audio=document.getElementById("audioAnswer");
 
 /** pull the selected radio */ 
 let checkRadio = document.querySelector(
         'input[name="answer"]:checked');
 /** conditional that trigger actions accorder if result is right or wrong */
 if (checkRadio.value === correctAnswer){
-    displayPic.src="assets/images/right-answer.gif";
+    displayPic.src= imgFolder +"right-answer.gif";
     audio.src="assets/audio/woohoo.mp3";
     audio.play();
     audio.loop=false;
     audio.volume=0.04; 
     rightAnswerCount();
     increaseTries();
-    document.getElementById("checkSentence").style.visibility="hidden";
-    document.getElementById("getPic").style.visibility="visible";
-
+    checkSentenceButton.classList.add("invisible");
+    getPicButton.classList.remove("invisible");
 } else if (checkRadio.value !== correctAnswer){
-    displayPic.src="assets/images/wrong-answer.gif";
+    displayPic.src= imgFolder + "wrong-answer.gif";
     audio.src="assets/audio/oops.mp3";
     audio.play();
     audio.loop=false;
@@ -144,12 +152,12 @@ function rightAnswerCount() {
     
 let rightAnswerCount=parseInt(document.getElementById("correctAnswer").innerText);
 document.getElementById("correctAnswer").innerText=++rightAnswerCount;
-    console.log("rightAnswerCount", rightAnswerCount);
 }
 /** tries count */
 function increaseTries() {
     
 let triesCount=parseInt(document.getElementById("tries").innerText);
+let finalResultImg=document.getElementById("finalResultImg");
 
 document.getElementById("tries").innerText=++triesCount;
 let gotRight=parseInt(document.getElementById("correctAnswer").innerHTML);
@@ -159,16 +167,16 @@ let gotRight=parseInt(document.getElementById("correctAnswer").innerHTML);
         let finalMessage="";
         if (gotRight<=4){
             finalMessage="Good try! Keep the practice.";
-            document.getElementById("finalResultImg").src="assets/images/reach-sad.gif";
-            document.getElementById("finalResultImg").style.visibility="visible"; 
-        } else if (gotRight=5 && gotRight<=8) {
+            finalResultImg.src=imgFolder + "reach-sad.gif";
+            finalResultImg.style.visibility="visible"; 
+        } else if (gotRight===5 && gotRight<=8) {
             finalMessage="Well done! Keep the good work.";
-            document.getElementById("finalResultImg").src="assets/images/qoobee-agapi.gif";
-            document.getElementById("finalResultImg").style.visibility="visible"; 
+            finalResultImg.src=imgFolder + "qoobee-agapi.gif";
+            finalResultImg.style.visibility="visible"; 
         } else {
             finalMessage="Excellent job!";
-            document.getElementById("finalResultImg").src="assets/images/party-popper-confetti.gif";
-            document.getElementById("finalResultImg").style.visibility="visible";                                            
+            finalResultImg.src=imgFolder + "party-popper-confetti.gif";
+            finalResultImg.style.visibility="visible";                                            
         }
         document.getElementById("finalResultMessage").innerHTML=finalMessage;
         document.getElementById("finalResult").style.visibility="visible";
@@ -176,7 +184,7 @@ let gotRight=parseInt(document.getElementById("correctAnswer").innerHTML);
 }
 /** exit button */
 function exit() {
-    console.log("exit triggered");
+    
     let exitYes = confirm("Do you want to exit the game?");
     if (exitYes)
         {alert("Try again soon!");
