@@ -5,8 +5,38 @@ body{
 .invisible {
     display: none!important;
 }
-/* mediaQuery */
+/* mediaQuery small screen alert*/
 
+@media screen and (max-width: 760px) {
+    body {background-color: aquamarine;}
+    #smallScreen {display:flex;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 22%;
+    margin-left: 0 auto;
+    z-index: 4;
+    justify-content: center;            
+    }
+#alertSmallScreen{
+    align-self: center;
+    justify-self: center;
+    margin-left: 0 auto;
+    padding: 2px;
+}
+    #sorryImg {
+        max-width: 15em;
+        max-height: 17em;
+    }
+    #coverPic, #start, #coverText, #help, #music{
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 761px) {
+    #smallScreen, #alertSmallScreen, #sorryImg{
+        display: none;
+    }
+}
 /* general styling */
 h1 {
     font-family: "PT Sans";

@@ -20,7 +20,7 @@
       <h1>🕹️ Let's play!</h1>
     </div>
     <div id="startAudio">
-      <button data-type="help"><i class="fas fa-question fa-2x"></i></button>
+      <button id="help" data-type="help"><i class="fas fa-question fa-2x"></i></button>
       <button id="music">🔉</button>
       <audio src="assets/audio/komiku_-_12_-_bicycle.wav" id="audio"></audio>
     </div>
@@ -50,6 +50,11 @@
       <p id="finalResultMessage" class="textFinal"></p>
       <img id="finalResultImg" src="assets/images/party-popper-confetti.gif" alt="celebration pic">
     </div>
+<!-- mediaQuery small screen alert -->
+<div id="smallScreen" display="none">
+    <p id="alertSmallScreen" class="textFinal">Thanks for visiting us! <br> Sorry, your device won't support the game, please try from a tablet or pc.</p>
+  <img id="sorryImg" src="assets/images/sorry.gif" alt="sorry">
+</div>
 <!-- div that contain the game/exercise -->
     <div class="border" id="game-zone">
       <div class="border" id="pic-zone">
