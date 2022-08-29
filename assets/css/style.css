@@ -5,38 +5,6 @@ body{
 .invisible {
     display: none!important;
 }
-/* mediaQuery small screen alert*/
-
-@media screen and (max-width: 760px) {
-    body {background-color: aquamarine;}
-    #smallScreen {display:flex;
-    flex-direction: column;
-    position: fixed;
-    margin-top: 22%;
-    margin-left: 0 auto;
-    z-index: 4;
-    justify-content: center;            
-    }
-#alertSmallScreen{
-    align-self: center;
-    justify-self: center;
-    margin-left: 0 auto;
-    padding: 2px;
-}
-    #sorryImg {
-        max-width: 15em;
-        max-height: 17em;
-    }
-    #coverPic, #start, #coverText, #help, #music{
-        display: none !important;
-    }
-}
-
-@media screen and (min-width: 761px) {
-    #smallScreen, #alertSmallScreen, #sorryImg{
-        display: none;
-    }
-}
 /* general styling */
 h1 {
     font-family: "PT Sans";
@@ -122,7 +90,6 @@ span {
 }
 
 /* styling the game zone and inside divs*/
-
 #game-zone {
     background-color: aquamarine;
 }
@@ -258,4 +225,45 @@ span {
 /* hide the answer label, this is used just for recall data in js */
 #answerLabel {
     visibility: hidden;
+}
+
+/* mediaQuery small screen alert*/
+
+@media screen and (max-width: 767px) {
+    body {background-color: aquamarine;}
+    #smallScreen {display:flex;
+        background-color: #ff444b;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    margin-left: 0 auto;
+    z-index: 6;
+    justify-content: center;        
+    align-items: center;    
+    }
+#alertSmallScreen{
+    align-self: center;
+    justify-self: center;
+    margin-left: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+    #sorryImg {
+        max-width: 15em;
+        max-height: 17em;
+    }
+    #coverPic, #start, #coverText, #help, #music{
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #smallScreen, #alertSmallScreen, #sorryImg{
+        display: none;
+    }
+    #pickAnswer, #showResult {
+        margin-top: 3em;
+    }
 }
