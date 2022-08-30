@@ -2,7 +2,7 @@
 # 🕹️ Let's play!
 ## Elementary level English exercises for children.
 
-![N|Solid](https://share.balsamiq.com/c/psMBm4vtGhEpHc6erWf33o.png)
+![N|Solid](https://share.balsamiq.com/c/j9ugKagWkeU1AnrgVVpd8x.png)
 
 ## Learn is Fun! 
 
@@ -175,16 +175,15 @@ ___________
 <br>
 
 | Feature | Test Action | Expected Outcome | Test Outcome |
-|:---|        :---:| :---:|:---:|
-| Start Button |example|example|example|
-| Instructions/Help Button |example|example|example|
-| Background Audio Button |example|example|example|
-| Close Game |example|example|example|
-| Get a picture Button |example|example|example|
-| Input radios |example|example|example|
-| Check your answer Button |example|example|example|
-| Result animation div |example|example|example|
-| Exit Button |example|example|example|
+|:---|        :---:| :---|:---:|
+| Start Button | Click on it | Hide the welcome screen | Pass |
+| Instructions/Help Button | Click on it | Display a div with instructions | Pass |
+| Background Audio Button | Click on it | Play/Pause the background audio | Pass |
+| Close Instructions/Help Button | Click on it | Close the div | Pass |
+| Get a picture Button | Click on it | Display a picture and the answer options | Pass |
+| Input radios | Click on it | Select the answer to check | Pass |
+| Check your answer Button | click on it | Check if the answer is right and give the feedback gif | Pass |
+| Exit Button | Click on it | Exit the game, return to the welcome screen | Pass |
 
 <br>
 
@@ -218,3 +217,5 @@ ___________
 - [W3Schools](https://www.w3schools.com/)
 - [Programiz](https://www.programiz.com/javascript/setTimeout)
 - [CSS-Tricks](https://css-tricks.com/)
+
+Also, I had made use of the tutor support and received guidance of my mentor.
