@@ -165,7 +165,7 @@ ___________
 
 ### JavaScript Validation
 
-*Result:* No errors, two warnings.
+*Result:* No errors, one warning.
 
 ![NSolid](https://share.balsamiq.com/c/3p81Pov42dJbSwB3prBfGE.png)
 
@@ -187,6 +187,22 @@ ___________
 
 <br>
 
+### Responsiveness
+________
+The site had been tested in various screen sizes as listed below.
+
+Mobile :
+The game can not be use in small screen as mobiles. It wouldn't being convenient as doesn't have enough space to display all at once and be visually clear, specially being the target user are children. For that reason, for these screens, a message will be display asking to visit us from a bigger device.
+
+Tablet :
+768x1024 / 1280x800 / 820x1180 / 810x1280
+
+Monitor :
+1280x1024 / 1600x900 / 2560x1440 / 3440x1440
+
+The site had been view in Chrome, Firefox and Safari without any noticeable problems.
+<br>
+
 ## Deployment
 ___________
 The website had been deployed on GitHub from the main branch on the repository PP2-Js, following the steps that had been mark in the screenshot as listed here:
@@ -199,9 +215,6 @@ The website had been deployed on GitHub from the main branch on the repository P
 <br>
 
 ![NSolid](https://share.balsamiq.com/c/a6tnq5QiiznugdZYD9XZNL.png)
-
-
-
 <br>
 
 ## Credits
@@ -218,4 +231,4 @@ ___________
 - [Programiz](https://www.programiz.com/javascript/setTimeout)
 - [CSS-Tricks](https://css-tricks.com/)
 
-Also, I had made use of the tutor support and received guidance of my mentor.
+Also, I had made use of the tutor support and received very helpful guidance and resources of my mentor, Brian Macharia.
