@@ -47,6 +47,13 @@ span {
     color: rgb(21, 21, 92);
 }
 
+
+.swal-modal {
+    border: 4px solid #eb0e0e;
+    width: 20%;
+    height: 30%;
+}
+
 /* styling cover div */
 #cover {
     background-color: orange !important;
@@ -263,13 +270,48 @@ span {
 #answerLabel {
     visibility: hidden;
 }
-
-.swal-modal {
-    border: 4px solid #eb0e0e;
-}
-
 /* mediaQuery small screen alert*/
-
+@media screen and (max-width: 414px) {
+    #helpInstructions, #finalResult {
+               width: 90%;
+               height: 70%;
+               margin-top: 10%;
+               margin-left: 0;
+               margin-left: 5%;
+      }
+      #closeInstructions {
+               margin-left: 90%;
+               margin-bottom: 2%;
+      }
+    #pic-zone {
+               width: 80%;
+            min-width: 18em;}
+    .button {
+               width: 5em;
+               height: 5em;}
+    #result {
+               width: 10em;
+               height: 9em;
+      }
+      #pickAnswer, #showResult {
+               width: 11em;
+               height: 10em;}
+      label {
+               font-size: 0.8em;}
+      #picture {
+               margin: 0 auto;
+               width: 60%;
+               max-width: 20em;
+               min-width: 14em;
+               height: 35%;
+               max-height: 17em;
+               min-height: 11em;}   
+        .swal-modal{
+            width: 60%;
+            height: 50%;
+        }
+}
+/*
 @media screen and (max-width: 767px) {
     body {
         background-color: aquamarine;
@@ -310,14 +352,15 @@ span {
         max-height: 27em;
     }
 
-    #coverPic,
+ /*   #coverPic,
     #start,
     #coverText,
     #help,
     #music {
         display: none !important;
     }
-}
+}*/
+
 
 @media screen and (min-width: 768px) {
 

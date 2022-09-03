@@ -165,7 +165,7 @@ ___________
 
 ### JavaScript Validation
 
-*Result:* No errors, one warning.
+*Result:* No errors, one warning. Mention of undefinded variable swal, but swal is the sweetAlert code.
 
 ![NSolid](https://share.balsamiq.com/c/3p81Pov42dJbSwB3prBfGE.png)
 

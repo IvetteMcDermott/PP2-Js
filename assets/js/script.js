@@ -138,7 +138,7 @@ let itemsInfo = [{
     },
 ];
 
-/** background audio control button, play/pause on click event*/
+/** background audio control button, play/pause onclick event*/
 music.addEventListener("click", function() {
     if (music.innerHTML === "🔉") {
         audio.play();
@@ -186,8 +186,9 @@ function ramdomNumb() {
     return numObj1;
 }
 
-/** display the picture and the answer options */
+/** display the img and the answer options */
 function getObject() {
+    /*calls the return from previous function*/
     let objToUse;
     let numObj = ramdomNumb();
 
@@ -228,7 +229,8 @@ function checkSent() {
     let checkRadio = document.querySelector(
         'input[name="answer"]:checked');
 
-    /** conditional that trigger actions accorder if result is right or wrong */
+    /** conditional that trigger actions accorder if result is right or wrong. 
+     * it will display img, audio and a sweetAlert as feedback */
     if (checkRadio.value === correctAnswer) {
         displayPic.src = imgFolder + "right-answer.gif";
         audio.src = "assets/audio/woohoo.mp3";
@@ -237,28 +239,31 @@ function checkSent() {
         audio.volume = 0.06;
         rightAnswerCount();
         increaseTries();
-        swal("Good job!", "You got it right.", "success");
+        swal(
+        {text:"Good job!", 
+        icon:"success",});
         checkSentenceButton.classList.add("invisible");
         getPicButton.classList.remove("invisible");
-
     } else if (checkRadio.value !== correctAnswer) {
         displayPic.src = imgFolder + "wrong-answer.gif";
         audio.src = "assets/audio/oops.mp3";
         audio.play();
         audio.loop = false;
         audio.volume = 0.06;
-        swal("Sorry!", "Try again", "error");
+        swal(
+            {text: "Try again!", 
+            icon: "error",});
         increaseTries();
     }
 }
-/** right answer count */
-function rightAnswerCount() {
 
+/** increase the right answer count */
+function rightAnswerCount() {
     let rightAnswerCount = parseInt(document.getElementById("correctAnswer").innerText);
     document.getElementById("correctAnswer").innerText = ++rightAnswerCount;
 }
 
-/** tries count */
+/** increase the tries count, and run actions when reach 10 of them */
 function increaseTries() {
 
     let triesCount = parseInt(document.getElementById("tries").innerText);
@@ -269,7 +274,7 @@ function increaseTries() {
     /** bring the right count that is calculated in other function*/
     let gotRight = parseInt(document.getElementById("correctAnswer").innerHTML);
 
-    /** gives text to the div that show message about the final score */
+    /** gives text to the div that show message about the final score when the tries is e */
     if (triesCount >= 10) {
         document.getElementById("finalResultText").innerHTML = `You got ${gotRight} of ${triesCount}`;
         let finalMessage = "";
