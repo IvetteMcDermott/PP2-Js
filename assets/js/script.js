@@ -138,7 +138,7 @@ let itemsInfo = [{
     },
 ];
 
-/** background audio control button, play/pause onclick event*/
+/* background audio control button, play/pause onclick event */
 music.addEventListener("click", function() {
     if (music.innerHTML === "🔉") {
         audio.play();
@@ -151,7 +151,7 @@ music.addEventListener("click", function() {
     }
 });
 
-/** click event for buttons */
+/* click event for buttons */
 let buttons = document.getElementsByTagName("button");
 
 for (let clicked of buttons) {
@@ -180,15 +180,15 @@ for (let clicked of buttons) {
 
 /* functions that generate the ramdom number that will be use for display the img and pull the right object for
  * answer options and the right answer. 
- * @return {numbObj1} number that will be call in next function  */
+ * @return {numbObj1} number that will be call in next function */
 function ramdomNumb() {
     let numObj1 = Math.floor(Math.random() * itemsInfo.length);
     return numObj1;
 }
 
-/** display the img and the answer options */
+/* display the img and the answer options */
 function getObject() {
-    /*calls the return from previous function*/
+    /*calls the return from previous function */
     let objToUse;
     let numObj = ramdomNumb();
 
@@ -204,7 +204,7 @@ function getObject() {
     let objOpt3 = objToUse[0, "opt3"];
     let correctAnswer = objToUse[0, "correctAnswer"];
 
-    /** set radios to unchecked */
+    /* set radios to unchecked */
     opt1.checked = false;
     opt2.checked = false;
     opt3.checked = false;
@@ -218,18 +218,18 @@ function getObject() {
     opt2.value = objOpt2;
     opt3.value = objOpt3;
 }
-/** function that check the answer selected */
+/* function that check the answer selected */
 function checkSent() {
 
     const displayPic = document.getElementById("result");
     const audio = document.getElementById("audioAnswer");
     let correctAnswer = document.getElementById("answerLabel").innerHTML;
 
-    /** pull the selected radio */
+    /* pull the selected radio */
     let checkRadio = document.querySelector(
         'input[name="answer"]:checked');
 
-    /** conditional that trigger actions accorder if result is right or wrong. 
+    /* conditional that trigger actions accorder if result is right or wrong. 
      * it will display img, audio and a sweetAlert as feedback */
     if (checkRadio.value === correctAnswer) {
         displayPic.src = imgFolder + "right-answer.gif";
@@ -239,9 +239,10 @@ function checkSent() {
         audio.volume = 0.06;
         rightAnswerCount();
         increaseTries();
-        swal(
-        {text:"Good job!", 
-        icon:"success",});
+        swal({
+            text: "Good job!",
+            icon: "success",
+        });
         checkSentenceButton.classList.add("invisible");
         getPicButton.classList.remove("invisible");
     } else if (checkRadio.value !== correctAnswer) {
@@ -250,20 +251,21 @@ function checkSent() {
         audio.play();
         audio.loop = false;
         audio.volume = 0.06;
-        swal(
-            {text: "Try again!", 
-            icon: "error",});
+        swal({
+            text: "Try again!",
+            icon: "error",
+        });
         increaseTries();
     }
 }
 
-/** increase the right answer count */
+/* increase the right answer count */
 function rightAnswerCount() {
     let rightAnswerCount = parseInt(document.getElementById("correctAnswer").innerText);
     document.getElementById("correctAnswer").innerText = ++rightAnswerCount;
 }
 
-/** increase the tries count, and run actions when reach 10 of them */
+/* increase the tries count, and run actions when reach 10 of them */
 function increaseTries() {
 
     let triesCount = parseInt(document.getElementById("tries").innerText);
@@ -271,15 +273,15 @@ function increaseTries() {
 
     document.getElementById("tries").innerText = ++triesCount;
 
-    /** bring the right count that is calculated in other function*/
+    /* bring the right count that is calculated in other function */
     let gotRight = parseInt(document.getElementById("correctAnswer").innerHTML);
 
-    /** gives text to the div that show message about the final score when the tries is e */
+    /* gives text to the div that show message about the final score when the tries get to 10 */
     if (triesCount >= 10) {
         document.getElementById("finalResultText").innerHTML = `You got ${gotRight} of ${triesCount}`;
         let finalMessage = "";
         if (gotRight <= 4) {
-            finalMessage = "Good try! Keep the practice.";
+            finalMessage = "Good try! Keep practing.";
             finalResultImg.src = imgFolder + "reach-sad.gif";
             finalResultImg.style.visibility = "visible";
         } else if (gotRight === 5 && gotRight <= 8) {
@@ -296,7 +298,7 @@ function increaseTries() {
     }
 }
 
-/** exit button */
+/* exit button */
 function exit() {
     /* sweetAlert used for the confirmation of the exit of the game button */
     swal({
@@ -318,4 +320,3 @@ function exit() {
         }
     });
 }
-

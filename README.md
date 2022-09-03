@@ -4,12 +4,12 @@
 
 ![N|Solid](https://share.balsamiq.com/c/j9ugKagWkeU1AnrgVVpd8x.png)
 
-## Learn is Fun! 
+## Learning is Fun! 
 
 [🖥️ Site live]( https://ivettemcdermott.github.io/PP2-Js/)
 
-This site is designed to provide a tool where the children can practice in a fun way describing clothing items with a basic sentence structure, according to a randomly displayed picture. The image is not just focus on articles of clothing but also on a basic range of colors. 
-The exercises are targeted to be used by children at elementary level of English.
+This site is designed to provide a tool where children can practice in a fun way describing clothing items with a basic sentence structure, according to a randomly displayed picture. The image is not just focused on articles of clothing but also on a basic range of colors. 
+The exercises are targeted to be used by children at elementary level English.
 
 The site opens with a full welcome screen with a fun animated character inviting the child to start the game, once the start button is clicked the welcome screen hides, and allows the child to see the game screen with a div in front where there the instructions for play can be read. The div needs to be closed in order to start the game itself.
 
@@ -20,7 +20,7 @@ The gifs and audios used are cartoonish in order to not discourage the child and
 
 The score, as the exercise actions are repeated over and over, it will log the amount of tries, and the amount of right answers. As the amount of tries get to ten, the game will stop and give back a final result in a pop div where can be read the number of right answers of the ten tries that had been done, that together with an encouraging message and a fun gif again.
 
-After that, the children will need to exit the game as it will be locked. The game won't exit automatically, this thinking of the children could want to show their results to someone that it is not inmediatelly available.
+After that, the children will need to exit the game as it will be locked. The game won't exit automatically, this thinking that the children could want to show their results to someone that it is not immediately available.
 
 The exit is triggered by a button in the bottom right corner, it will give an alert to confirm the exit and a second one inviting them to come back again. After that it will bring the screen to the welcome one again.
 
@@ -63,7 +63,7 @@ Included features by screen
 
 ### The welcome screen
 
-- *Instructions Button:* It displays a div as pop up, where the instructions can be red.
+- *Instructions Button:* It displays a div as pop up, where the instructions can be read.
 - *Background Button:* It allows the user to play or pause a background audio.
 - *Start Button:* It hides the welcome screen and allows the user to visualize the next one.
 
@@ -107,9 +107,10 @@ Included features by screen
 
 ### Features that can be implemented in the future
 
-- The array can be increase with new objects and with this the vocabulary to use. 
+- The array can be increased with new objects and with this the vocabulary to use. 
 - A form that sends the results to a data base, or the teacher or tutor of the children by email.
 - A report could be included that show a full list of the selected answers, indicating if they were right or wrong.
+- A timer between last feedback and final result div being display.
 
 ## Design
 ___________
@@ -192,7 +193,7 @@ ________
 The site had been tested in various screen sizes as listed below.
 
 Mobile :
-The game can not be use in small screen as mobiles. It wouldn't being convenient as doesn't have enough space to display all at once and be visually clear, specially being the target user are children. For that reason, for these screens, a message will be display asking to visit us from a bigger device.
+The game can not be used in small screen as mobiles. It wouldn't being convenient as doesn't have enough space to display all at once and be visually clear, specially being the target user are children. For that reason, for these screens, a message will be display asking to visit us from a bigger device.
 
 Tablet :
 768x1024 / 1280x800 / 820x1180 / 810x1280
@@ -205,7 +206,7 @@ The site had been view in Chrome, Firefox and Safari without any noticeable prob
 
 ## Deployment
 ___________
-The website had been deployed on GitHub from the main branch on the repository PP2-Js, following the steps that had been mark in the screenshot as listed here:
+The website had been deployed on GitHub from the main branch on the repository PP2-Js, following the steps that had been marked in the screenshot as listed here:
 
 1. Settings
 2. Pages.
