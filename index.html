@@ -5,10 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-control" content="public">
+
     <meta name="Description" content="Enter your description here" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/cosmo/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@7.24.1/dist/sweetalert2.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+
     <script src="https://kit.fontawesome.com/f84495756a.js" crossorigin="anonymous"></script>
     <title>🕹️ Let's play!</title>
 </head>
@@ -20,7 +27,7 @@
             <h1>🕹️ Let's play!</h1>
         </div>
         <div id="startAudio">
-            <button id="help" data-type="help"><i class="fas fa-question fa-2x"></i></button>
+            <button id="help" data-type="help"><i class="fas fa-question fa-2x"></i>Help</button>
             <button id="music">🔉</button>
             <audio src="assets/audio/komiku_-_12_-_bicycle.wav" id="audio"></audio>
         </div>
@@ -43,7 +50,7 @@
                 <li>Press the button "Check your Answer"</li>
                 <li>You will get a result animation and your score will be increased.</li>
             </ol>
-            <p>Good luck!</p>
+            <p>Put your sound on and let's play!</p>
         </div>
     </div>
     <!-- div that display the final results, it will be display when triesCount gets to 10 -->
@@ -101,6 +108,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 
     <script src="assets/js/script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
 </body>
 
 </html>

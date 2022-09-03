@@ -95,7 +95,7 @@ Included features by screen
 ![NSolid](https://share.balsamiq.com/c/bT7LDd1Cct5VWz2UXKfzXC.png)
 
 - *Final Result Div:* It will be displayed on top of the game when the score reachs 10 tries. It contains the score in a text, an encorauging message and a gif. The message and gif will vary according to the final score.
-- *Exit Button:* It gives an alert to confirm the exit, and a second one with an invitation to return.
+- *Exit Button:* It gives an alert to confirm the exit or not.
 
 ![NSolid](https://share.balsamiq.com/c/2Z8iagiKKq7eL84ZjWgeve.png)
 
@@ -183,7 +183,7 @@ ___________
 | Get a picture Button | Click on it | Display a picture and the answer options | Pass |
 | Input radios | Click on it | Select the answer to check | Pass |
 | Check your answer Button | click on it | Check if the answer is right and give the feedback gif | Pass |
-| Exit Button | Click on it | Exit the game, return to the welcome screen | Pass |
+| Exit Button | Click on it | Display a sweetAlert to confirm if exit the game or not, return to the welcome screen if confirm, stay in the game if click no | Pass |
 
 <br>
 
@@ -230,5 +230,8 @@ ___________
 - [W3Schools](https://www.w3schools.com/)
 - [Programiz](https://www.programiz.com/javascript/setTimeout)
 - [CSS-Tricks](https://css-tricks.com/)
+- [SweetAlert](https://sweetalert2.github.io/)
+- [Gordon Chan](https://www.youtube.com/channel/UC-6Q5WtmVNXXgRLmGB-HIUA/about)
+- [Tony Teachs Tech](https://www.youtube.com/c/TonyTeachesTech)
 
 Also, I had made use of the tutor support and received very helpful guidance and resources of my mentor, Brian Macharia.
