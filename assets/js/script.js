@@ -178,8 +178,8 @@ for (let clicked of buttons) {
     });
 }
 
-/* functions that generate the ramdom number that will be use for display the img and pull the right object for
- * answer options and the right answer. 
+/* function that generates the random number that will be use for display the img and pull the right object for
+ * answer options and the right answer from the array. 
  * @return {numbObj1} number that will be call in next function */
 function ramdomNumb() {
     let numObj1 = Math.floor(Math.random() * itemsInfo.length);

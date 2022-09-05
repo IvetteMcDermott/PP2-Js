@@ -136,22 +136,18 @@ Typography, the font used for the website is "PT Sans" from Google Fonts. Easy t
 <br>
 
 ### Mobile
-<br>
 
 - [Welcome Screen  - Mobile](https://share.balsamiq.com/c/iSfbNN8bNa4uxyj1X9vLyh.png)
 - [Game Screen with Instructions/Help displayed - Mobile](https://share.balsamiq.com/c/nGkxrksAvnVNaBbKq1ed3h.png) 
 - [Game Screen  - Mobile](https://share.balsamiq.com/c/bLRx5st8wkR6HPrZiGBae4.png)
 - [Game Screen with Final Result div displayed - Mobile](https://share.balsamiq.com/c/vdiJRoGGhuqRD2XR27BPHM.png) 
-<br>
 
 ### Monitor
-<br>
 
 - [Welcome Screen - Monitor](https://share.balsamiq.com/c/8RjqARgW8qAXxcvg1BcgMo.png) 
 - [Game Screen with Instructions/Help displayed - Monitor](https://share.balsamiq.com/c/mPyivSBs2yEnCTwYX15VAG.png) 
 - [Game Screen - Monitor](https://share.balsamiq.com/c/mYPVPf4hb1ox4fTkJG1KnQ.png)  
 - [Game Screen with Final Result div displayed - Monitor](https://share.balsamiq.com/c/5utevUF2k4Q5b7zuhFhU2N.png) 
-<br>
 
 ## Technologies Used 
 
@@ -206,7 +202,7 @@ Typography, the font used for the website is "PT Sans" from Google Fonts. Easy t
 
 ![Nsolid](https://share.balsamiq.com/c/6TyZqLrFaB8DgkhDqfK11Z.png)
 
-### Features Testing
+### Features Tested
 <br>
 
 | Feature | Test Action | Expected Outcome | Test Outcome |
@@ -251,7 +247,6 @@ The website had been deployed on GitHub from the main branch on the repository P
 2. Pages.
 3. Branch main.
 4. Site URL address is show.
-
 <br>
 
 ![NSolid](https://share.balsamiq.com/c/a6tnq5QiiznugdZYD9XZNL.png)
@@ -262,7 +257,7 @@ The website had been deployed on GitHub from the main branch on the repository P
 - [Get Emoji](https://getemoji.com/) Emoji used in the title and name had been copied from this site.
 - [Tenor](https://tenor.com/) Gifs used in the website had been obtained from this site.
 
- While no code had been copied completely, through research and problem solving I had learned and found solutions in different blogs and websites, as listed below.    
+ While no code had been copied, through research and problem solving I had learned and found solutions in different blogs and websites, as listed below.    
 
 - [GeeksforGeeks](https://www.geeksforgeeks.org/)
 - [Stack Overflow](https://stackoverflow.com/)
