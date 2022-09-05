@@ -135,16 +135,16 @@ Typography, the font used for the website is "PT Sans" from Google Fonts. Easy t
 ## Wireframes
 <br>
 
-Mobile
+### Mobile
 <br>
 
 - [Welcome Screen  - Mobile](https://share.balsamiq.com/c/iSfbNN8bNa4uxyj1X9vLyh.png)
 - [Game Screen with Instructions/Help displayed - Mobile](https://share.balsamiq.com/c/nGkxrksAvnVNaBbKq1ed3h.png) 
 - [Game Screen  - Mobile](https://share.balsamiq.com/c/bLRx5st8wkR6HPrZiGBae4.png)
 - [Game Screen with Final Result div displayed - Mobile](https://share.balsamiq.com/c/vdiJRoGGhuqRD2XR27BPHM.png) 
-
 <br>
-Monitor
+
+### Monitor
 <br>
 
 - [Welcome Screen - Monitor](https://share.balsamiq.com/c/8RjqARgW8qAXxcvg1BcgMo.png) 
@@ -198,7 +198,7 @@ Monitor
 
 ### Lighthouse
 
-- For mobiles
+- For mobiles. Lower performance against the monitors, mainly because it suggests the use of videos instead GIF but this would modify the transparency of the element, and this will affect the visual display.
 
 ![Nsolid](https://share.balsamiq.com/c/phTfye1dkUzQKpL1qKbKB6.png)
 
@@ -222,7 +222,7 @@ Monitor
 <br>
 
 ### Bugs
-<br>
+
 Due to the current function that generates the random number is possible to get the same image more than once. This had been left without fix at the moment. While been tested, it hadn't been often but it's a possibility so I am researching in order to give a solution to it.
 
 <br>
