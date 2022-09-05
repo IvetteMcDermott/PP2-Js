@@ -29,7 +29,6 @@ Additional features, in the top right corner can be found two buttons, one with 
 <br>
 
 ## Index – Table of Contents
-___
 
 - [User Experience (UX)](#User-Experience-(UX))
 - [Features](#features)
@@ -42,7 +41,6 @@ ___
 <br>
 
 ## User Experience (UX)
-___________
 
 As a user I want to be able to:
 
@@ -57,7 +55,6 @@ As a user I want to be able to:
 <br>
 
 ## Features
-___________
 
 Included features by screen
 
@@ -90,12 +87,20 @@ Included features by screen
 
 ![NSolid](https://share.balsamiq.com/c/baYCU5vjysAfhYjzmvBrcy.png)
 
-- *Animation for answer:* Div that contains a gif according to the result of the input selected, it will be displayed as feedback if it was right or wrong, as shown in the following image.
+- *Feedback for answer:* A GIF plus an audio and a sweet Alert will be displayed according to the result of the input selected, if it was right or wrong, as shown in the following images.
 
-![NSolid](https://share.balsamiq.com/c/bT7LDd1Cct5VWz2UXKfzXC.png)
+Wrong answer 
+
+![NSolid](https://share.balsamiq.com/c/42MneEdR5VPYL96GXNamaz.png)
+<br>
+
+Right answer 
+
+![NSolid](https://share.balsamiq.com/c/5NiABqs5JRtupNiEJBCX7F.png)
+<br>
 
 - *Final Result Div:* It will be displayed on top of the game when the score reachs 10 tries. It contains the score in a text, an encorauging message and a gif. The message and gif will vary according to the final score.
-- *Exit Button:* It gives an alert to confirm the exit or not.
+- *Exit Button:* It gives a sweet Alert to confirm the exit or not.
 
 ![NSolid](https://share.balsamiq.com/c/2Z8iagiKKq7eL84ZjWgeve.png)
 
@@ -113,28 +118,42 @@ Included features by screen
 - A form that sends the results to a data base, or the teacher or tutor of the children by email.
 - A report could be included that show a full list of the selected answers, indicating if they were right or wrong.
 - A timer between last feedback and final result div being display.
-- Being the target user young children, and following the methodology of visual materials size for them, it shouldn't be used in small screens, in that case a screen messesage display asking them to visit us from a bigger device. As the example follows:
+- Automatic display of next picture. It hadn't being implemented because this would take away the possibility that the user have a review in what had done.
+
+- Being the target user young children, and following the methodology of visual materials size for them, it shouldn't be used in small screens, in that case a screen message could be displayed asking them to visit us from a bigger device. As the example follows:
 
 ![Nsolid](https://share.balsamiq.com/c/mK5ZKMJPt114jPsYFFmSAV.png)
 
-### Design
-___________
+## Design
+
 The game had been created from zero, but had been influeced by exercise pages for children like British Council where different types of practice exercises can be found.
 
 Color scheme had been based in a selection from https://coolors.co/.
 
 Typography, the font used for the website is "PT Sans" from Google Fonts. Easy to read in any element.
 
-### Wireframes
+## Wireframes
+<br>
+
+Mobile
+<br>
+
+- [Welcome Screen  - Mobile](https://share.balsamiq.com/c/iSfbNN8bNa4uxyj1X9vLyh.png)
+- [Game Screen with Instructions/Help displayed - Mobile](https://share.balsamiq.com/c/nGkxrksAvnVNaBbKq1ed3h.png) 
+- [Game Screen  - Mobile](https://share.balsamiq.com/c/bLRx5st8wkR6HPrZiGBae4.png)
+- [Game Screen with Final Result div displayed - Mobile](https://share.balsamiq.com/c/vdiJRoGGhuqRD2XR27BPHM.png) 
+
+<br>
+Monitor
+<br>
+
 - [Welcome Screen - Monitor](https://share.balsamiq.com/c/8RjqARgW8qAXxcvg1BcgMo.png) 
 - [Game Screen with Instructions/Help displayed - Monitor](https://share.balsamiq.com/c/mPyivSBs2yEnCTwYX15VAG.png) 
-- [Game Screen with Final Result div displayed - Monitor](https://share.balsamiq.com/c/5utevUF2k4Q5b7zuhFhU2N.png) 
 - [Game Screen - Monitor](https://share.balsamiq.com/c/mYPVPf4hb1ox4fTkJG1KnQ.png)  
-
+- [Game Screen with Final Result div displayed - Monitor](https://share.balsamiq.com/c/5utevUF2k4Q5b7zuhFhU2N.png) 
 <br>
 
 ## Technologies Used 
-___________
 
 ### Languages
 
@@ -151,7 +170,7 @@ ___________
 <br>
 
 ## Testing
-___________
+<br>
 
 ### HTML Validation
 
@@ -177,6 +196,16 @@ ___________
 
 <br>
 
+### Lighthouse
+
+- For mobiles
+
+![Nsolid](https://share.balsamiq.com/c/phTfye1dkUzQKpL1qKbKB6.png)
+
+- For monitors
+
+![Nsolid](https://share.balsamiq.com/c/6TyZqLrFaB8DgkhDqfK11Z.png)
+
 ### Features Testing
 <br>
 
@@ -190,7 +219,6 @@ ___________
 | Input radios | Click on it | Select the answer to check | Pass |
 | Check your answer Button | click on it | Check if the answer is right and give the feedback gif | Pass |
 | Exit Button | Click on it | Display a sweetAlert to confirm if exit the game or not, return to the welcome screen if confirm, stay in the game if click no | Pass |
-
 <br>
 
 ### Bugs
@@ -199,8 +227,8 @@ Due to the current function that generates the random number is possible to get 
 
 <br>
 
-### Responsiveness
-________
+## Responsiveness
+
 The site had been tested in various screen sizes as listed below.
 
 Mobile :
@@ -216,7 +244,7 @@ The site had been view in Chrome, Firefox and Safari without any noticeable prob
 <br>
 
 ## Deployment
-___________
+
 The website had been deployed on GitHub from the main branch on the repository PP2-Js, following the steps that had been marked in the screenshot as listed here:
 
 1. Settings
@@ -230,7 +258,6 @@ The website had been deployed on GitHub from the main branch on the repository P
 <br>
 
 ## Credits
-___________
 
 - [Get Emoji](https://getemoji.com/) Emoji used in the title and name had been copied from this site.
 - [Tenor](https://tenor.com/) Gifs used in the website had been obtained from this site.
