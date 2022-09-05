@@ -68,8 +68,7 @@ span {
 
 #start {
     position: fixed;
-    margin-top: 30%;
-    margin-left: 20%;
+    margin-left: 70%;
     font-family: "PT Sans";
     font-size: 1.3em;
     font-weight: 900;
@@ -78,10 +77,10 @@ span {
 
 #coverPic {
     position: relative;
-    margin-top: 16%;
+    margin-top: 11%;
     margin-left: 20%;
     width: 22%;
-    height: 30%;
+    height: 32%;
 }
 
 #coverText {
@@ -248,7 +247,7 @@ span {
 }
 
 #finalResultImg {
-    width: 18%;
+    width: 20%;
     height: 24%;
     position: fixed;
     margin-left: 12%;
@@ -276,101 +275,95 @@ span {
 
 /* ------------------mediaQuery-------------------- */
 
-  /*this is the mediaQuery for mobile, it's not being display but it's working as screenshots will show in the README
-    it had been work for 414x896 / 360x740 / 375x667 */
-
+/* mediaQuery for width */
 @media screen and (max-width: 767px) {
-    #helpInstructions, #finalResult {
-               width: 90%;
-               height: 70%;
-               margin-top: 10%;
-               margin-left: 0;
-               margin-left: 5%;
-      }
-      #closeInstructions {
-               margin-left: 90%;
-               margin-bottom: 2%;
-      }
-    #pic-zone {
-               width: 80%;
-            min-width: 18em;}
-    .buttons {
-               width: 5em;
-               height: 5em;}
-    #result {
-               width: 10em;
-               height: 9em;
-      }
-      #pickAnswer, #showResult {
-               width: 11em;
-               height: 10em;}
-      label {
-               font-size: 0.8em;}
-      #picture {
-               margin: 0 auto;
-               width: 60%;
-               max-width: 20em;
-               min-width: 14em;
-               height: 35%;
-               max-height: 17em;
-               min-height: 11em;}   
-        .swal-modal{
-            width: 60%;
-            height: 35%;
-        }
-} 
-/*
-screen with message that device won't support the site, for mobiles 
-@media screen and (max-width: 767px) {
-    body {
-        background-color: aquamarine;
+    h1 {
+        font-weight: 400;
+        font-size: 36px;
     }
 
-    #smallScreen {
-        display: flex;
-        background-color: #ff444b;
-        flex-direction: column;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        margin-top: 0;
-        margin-left: 0;
-        margin-left: auto;
-        z-index: 6;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #alertSmallScreen {
-        align-self: center;
-        justify-self: center;
-        margin-left: 0;
-        margin-left: auto;
-        padding: 10px;
-        text-align: center;
-    }
-
-    #title {
-        width: 70%
-    }
-
-    #sorryImg {
-        width: 35%;
-        height: 30%;
-        max-width: 24em;
-        max-height: 27em;
-    }
-
-    #coverPic,
-    #start,
-    #coverText,
     #help,
-    #helpInstructions,
     #music {
-        display: none !important;
+        font-size: 1.5em;
+    }
+
+    i.fas.fa-question.fa-2x {
+        font-weight: 600;
+        font-size: 1.5em;
+    }
+
+    #start {
+        margin-top: 5%;
+        margin-left: 50%;
+    }
+
+    #coverText {
+        margin-left: 4%;
+    }
+
+    #helpInstructions,
+    #finalResult {
+        width: 90%;
+        height: 70%;
+        margin-top: 10%;
+        margin-left: 0;
+        margin-left: 5%;
+    }
+
+    .finalText {
+        margin-left: 0;
+        margin-left: auto;
+    }
+
+    #closeInstructions {
+        margin-left: 90%;
+        margin-bottom: 2%;
+    }
+
+    #pic-zone {
+        width: 80%;
+        min-width: 18em;
+    }
+
+    .buttons {
+        width: 5em;
+        height: 5em;
+    }
+
+    #result {
+        width: 10em;
+        height: 9em;
+    }
+
+    #pickAnswer,
+    #showResult {
+        width: 11em;
+        height: 10em;
+    }
+
+    label {
+        font-size: 0.8em;
+    }
+
+    #picture {
+        margin: 0 auto;
+        width: 60%;
+        max-width: 20em;
+        min-width: 14em;
+        height: 35%;
+        max-height: 17em;
+        min-height: 11em;
+    }
+
+    .swal-modal {
+        width: 60%;
+    }
+
+    #finalResultImg {
+        width: 22%;
+        height: 24%;
     }
 }
-*/
 
 @media screen and (min-width: 768px) {
 
@@ -386,6 +379,7 @@ screen with message that device won't support the site, for mobiles
     }
 }
 
+/* mediaQuery for heigh */
 @media screen and (min-height: 1020px) {
     #picture {
         width: 60%;
@@ -416,4 +410,5 @@ screen with message that device won't support the site, for mobiles
     #score-box {
         height: 4.5em;
     }
+
 }

@@ -108,11 +108,16 @@ Included features by screen
 ### Features that can be implemented in the future
 
 - The array can be increased with new objects and with this the vocabulary to use. 
+- New levels can be added to increase the difficulty of grammar.
+- New subjects can be added to widen the range of vocabulary.
 - A form that sends the results to a data base, or the teacher or tutor of the children by email.
 - A report could be included that show a full list of the selected answers, indicating if they were right or wrong.
 - A timer between last feedback and final result div being display.
+- Being the target user young children, and following the methodology of visual materials size for them, it shouldn't be used in small screens, in that case a screen messesage display asking them to visit us from a bigger device. As the example follows:
 
-## Design
+![Nsolid](https://share.balsamiq.com/c/mK5ZKMJPt114jPsYFFmSAV.png)
+
+### Design
 ___________
 The game had been created from zero, but had been influeced by exercise pages for children like British Council where different types of practice exercises can be found.
 
@@ -188,12 +193,18 @@ ___________
 
 <br>
 
+### Bugs
+<br>
+Due to the current function that generates the random number is possible to get the same image more than once. This had been left without fix at the moment. While been tested, it hadn't been often but it's a possibility so I am researching in order to give a solution to it.
+
+<br>
+
 ### Responsiveness
 ________
 The site had been tested in various screen sizes as listed below.
 
 Mobile :
-The game can not be used in small screen as mobiles. It wouldn't being convenient as doesn't have enough space to display all at once and be visually clear, specially being the target user are children. For that reason, for these screens, a message will be display asking to visit us from a bigger device.
+414x896 / 360x740 / 375x667 / 828x1792
 
 Tablet :
 768x1024 / 1280x800 / 820x1180 / 810x1280
